@@ -16,11 +16,25 @@
         <neighbouring>N S</neighbouring>
       </wagon-move>
     </tile>
+    <tile id="RU/V">
+      <vodyanoy />
+      <farm>NL NR EL ER SL SR WL WR</farm>
+    </tile>
+    <tile id="RU/SRFr">
+      <solovei />
+      <road>E W</road>
+      <farm>NL NR EL WR</farm>
+      <farm>ER SL SR WL</farm>
+    </tile>
   </tiles>
   <sets>
     <tile-set id="russian-promos/2013">
       <ref count="1" tile="RU/L" />
       <ref count="1" tile="RU/RRrr" />
+    </tile-set>
+    <tile-set id="russian-promos/2016">
+      <ref count="1" tile="RU/V" />
+      <ref count="1" tile="RU/SRFr" />
     </tile-set>
   </sets>
 </pack>
