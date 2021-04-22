@@ -5,7 +5,6 @@
     :label="rule.title"
     :disabled="!enabled"
     hide-details
-    color="#3E2723"
   />
 </template>
 
