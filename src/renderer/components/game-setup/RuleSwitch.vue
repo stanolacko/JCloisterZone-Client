@@ -5,7 +5,6 @@
     :label="rule.title"
     :disabled="!enabled"
     hide-details
-    color="#3E2723"
   />
 </template>
 
@@ -38,4 +37,5 @@ export default {
 
   .v-input--selection-controls__input
     margin-right: 15px
+    
 </style>
