@@ -22,6 +22,22 @@
     </g>
 
     <g
+      v-for="meeple in obelisks"
+      :key="meeple.id"
+      :transform="transformPosition(meeple.position)"
+      :class="colorCssClass(meeple.player)"
+    >
+      <use
+        class="meeple"
+        :x="-MEEPLE_SIZE * 1.5 / 2"
+        :y="-MEEPLE_SIZE * 1.5 / 2"
+        :width="MEEPLE_SIZE * 1.5"
+        :height="MEEPLE_SIZE * 1.5"
+        :href="`${MEEPLES_SVG}#obelisk`"
+      />
+    </g>
+
+    <g
       v-for="group in meeples"
       :key="group.id"
       :transform="group.customTransform ? group.customTransform : transformPoint(group)"
@@ -212,6 +228,13 @@ export default {
       return this.$store.state.game.deployedMeeples.filter(m => m.type === 'Barn')
     },
 
+    obelisks () {
+      if (this.deployedOnBridge) {
+        return []
+      }
+      return this.$store.state.game.deployedMeeples.filter(m => m.type === 'Obelisk')
+    },
+
     meeples () {
       const getGroupKey = ptr => {
         return `${ptr.position[0]},${ptr.position[1]},${ptr.feature}/${ptr.location}`
@@ -224,7 +247,7 @@ export default {
       })
 
       const selectable = this.meepleSelect ? keyBy(this.meepleSelect.options, 'meepleId') : null
-      const filtered = this.$store.state.game.deployedMeeples.filter(m => m.type !== 'Barn' && !this.isDeployedOnBridge(m) ^ this.deployedOnBridge)
+      const filtered = this.$store.state.game.deployedMeeples.filter(m => m.type !== 'Barn' && m.type !== 'Obelisk' && !this.isDeployedOnBridge(m) ^ this.deployedOnBridge)
       const groupped = groupBy(filtered, getGroupKey)
       const neutralInGroup = {}
       const groups = Object.entries(groupped).map(([key, meeples]) => {

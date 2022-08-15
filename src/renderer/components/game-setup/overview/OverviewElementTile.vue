@@ -55,7 +55,7 @@ import OverviewTile from '@/components/game-setup/overview/OverviewTile'
 import StandaloneTileImage from '@/components/game/StandaloneTileImage'
 
 const MEEPLES_SVG = require('~/assets/meeples.svg')
-const MEEPLES = ['small-follower', 'abbot', 'phantom', 'big-follower', 'builder', 'pig', 'mayor', 'wagon', 'barn', 'shepherd']
+const MEEPLES = ['small-follower', 'abbot', 'phantom', 'big-follower', 'builder', 'pig', 'mayor', 'wagon', 'barn', 'shepherd', 'obelisk' ]
 
 export default {
   components: {

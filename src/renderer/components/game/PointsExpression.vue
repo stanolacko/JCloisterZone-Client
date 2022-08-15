@@ -53,7 +53,8 @@ const TITLE_MAPPING = {
   'special-monastery': 'Special monastery',
   'gold': 'Gold ingots',
   'vodyanoy': 'Vodyanoy',
-  'watchtower': 'Watchtower'
+  'watchtower': 'Watchtower',
+  'obelisk': 'Obelisk'
 }
 
 const SUBTITLE_MAPPING = {
