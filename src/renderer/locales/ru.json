@@ -292,7 +292,7 @@
         "rename-player": "Переименовать игрока"
       },
       "game-element-box": {
-        "mandatory-for-selected-tiles": "Обязательно для выбранных плиток",,
+        "mandatory-for-selected-tiles": "Обязательно для выбранных плиток",
         "related-tiles-not-selected": "Связанные плитки не выбраны"
       },
       "header": {
