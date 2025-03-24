@@ -1,6 +1,6 @@
 {
   "@author": "Challa007",
-  "@jcz-version": "5.11.0",
+  "@jcz-version": "5.12.1",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Konfigurationsdatei",
@@ -191,6 +191,7 @@
       "mayor": "Bürgermeister",
       "phantom": "Phantom",
       "pig": "Schwein",
+      "obelisk": "Obelisk",
       "ringmaster": "Zirkusdirektor",
       "robber": "Raubritter-Karte",
       "shepherd": "Schäfer",

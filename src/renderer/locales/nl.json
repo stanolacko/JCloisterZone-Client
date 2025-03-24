@@ -1,6 +1,6 @@
 {
   "@author": "Kiap1969",
-  "@jcz-version": "5.11.0",
+  "@jcz-version": "5.12.1",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Configuratiebestand",
@@ -191,6 +191,7 @@
       "mayor": "Burgemeester",
       "phantom": "Fantoom",
       "pig": "Varken",
+      "obelisk": "Obelisk",
       "ringmaster": "Circusdirecteur",
       "robber": "Roofridder",
       "shepherd": "Herder",

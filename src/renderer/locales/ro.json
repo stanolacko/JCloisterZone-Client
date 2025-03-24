@@ -1,6 +1,6 @@
 {
   "@author": "NGC 54",
-  "@jcz-version": "5.11.0",
+  "@jcz-version": "5.12.1",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Fișier de configurație",
@@ -191,6 +191,7 @@
       "mayor": "Primar",
       "phantom": "Fantomă",
       "pig": "Porc",
+      "obelisk": "Obelisc",
       "ringmaster": "Director de circ",
       "robber": "Cavalerul brigand",
       "shepherd": "Oier",

@@ -1,6 +1,6 @@
 {
   "@author": "J0anJosep",
-  "@jcz-version": "5.11.0",
+  "@jcz-version": "5.12.1",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Fitxer de configuració",
@@ -191,6 +191,7 @@
       "mayor": "Alcalde",
       "phantom": "Fantasma",
       "pig": "Porc",
+      "obelisk": "Obelisk",
       "ringmaster": "Mestre de cerimònies",
       "robber": "Lladre",
       "shepherd": "Pastor",
