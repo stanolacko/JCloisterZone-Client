@@ -1,6 +1,6 @@
 {
   "@author": "Carlium",
-  "@jcz-version": "5.11.0",
+  "@jcz-version": "5.12.1",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Archivo de configuración",
@@ -66,6 +66,7 @@
     "offline": "Fuera de línea",
     "penalties": "Penalidades",
     "show-available-only": "mostrar solo disponibles",
+    "special-figures": "Special figures",
     "the-biggest-city": "La ciudad más grande",
     "the-longest-road": "El camino más largo",
     "tiles": "Losetas",
@@ -191,6 +192,7 @@
       "mayor": "Alcalde",
       "phantom": "Fantasma",
       "pig": "Cerdo",
+      "obelisk": "Obelisk",
       "ringmaster": "Maestro de ceremonias",
       "robber": "El Ladrón",
       "shepherd": "Pastor",

@@ -1,6 +1,6 @@
 {
   "@author": "Stepukiss",
-  "@jcz-version": "5.11.0",
+  "@jcz-version": "5.12.1",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Nustatymų aplankas",
@@ -66,6 +66,7 @@
     "offline": "Neprisijungęs",
     "penalties": "Nuobaudos",
     "show-available-only": "Rodyti tik prieinamus",
+    "special-figures": "Special figures",
     "the-biggest-city": "Didžiausias Miestas",
     "the-longest-road": "Ilgiausias kelias",
     "tiles": "Kortelės",
@@ -191,6 +192,7 @@
       "mayor": "Meras",
       "phantom": "Fantomas",
       "pig": "Kiaulė",
+      "obelisk": "Obelisk",
       "ringmaster": "Ringmeisteris",
       "robber": "Vagių Baronas",
       "shepherd": "Aviganis",

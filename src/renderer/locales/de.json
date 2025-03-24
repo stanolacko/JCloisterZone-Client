@@ -1,6 +1,6 @@
 {
   "@author": "Challa007",
-  "@jcz-version": "5.11.0",
+  "@jcz-version": "5.12.1",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Konfigurationsdatei",
@@ -66,6 +66,7 @@
     "offline": "Offline",
     "penalties": "Strafen",
     "show-available-only": "nur Verfügbare anzeigen",
+    "special-figures": "Special figures",
     "the-biggest-city": "Die größte Stadt",
     "the-longest-road": "Die längste Straße",
     "tiles": "Plättchen",
@@ -191,6 +192,7 @@
       "mayor": "Bürgermeister",
       "phantom": "Phantom",
       "pig": "Schwein",
+      "obelisk": "Obelisk",
       "ringmaster": "Zirkusdirektor",
       "robber": "Raubritter-Karte",
       "shepherd": "Schäfer",
