@@ -44,7 +44,7 @@ export default {
         gold: { title: this.$t('game.feature.gold-ingots'), events: [] },
         kingAndRobber: { title: this.$t('game.feature.king-and-robber'), events: [] },
         penalties: { title: this.$t('core-messages.penalties'), events: [] },
-        figures: { title: this.$t('core-messages.figures'), events: [] }
+        specialfigures: { title: this.$t('core-messages.special-figures'), events: [] }
       }
       item.events.forEach(ev => {
         if (!ev.points?.length) {
@@ -69,7 +69,7 @@ export default {
         } else if (type === 'vodyanoy') {
           rows.penalties.events.push(ev)
         } else if (type === 'obelisk') {
-          rows.figures.events.push(ev)
+          rows.specialfigures.events.push(ev)
         } else {
           rows.features.events.push(ev)
         }
