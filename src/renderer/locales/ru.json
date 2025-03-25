@@ -1,5 +1,6 @@
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   "@author": "pOison",
   "@jcz-version": "5.12.1",
   "@version": "0.4.1",
@@ -630,6 +631,8 @@
   }
 }
 =======
+=======
+>>>>>>> Stashed changes
     "@author": "pOison",
     "@jcz-version": "5.12.1",
     "@version": "0.4.1",
@@ -1257,5 +1260,9 @@
       "winter-edition-description": "Базовый набор из спин-оффа Зимнее издание. Содержит основную игру, расширенную дополнительными 12 плитками."
     }
   }
+<<<<<<< Updated upstream
+  
+>>>>>>> Stashed changes
+=======
   
 >>>>>>> Stashed changes
