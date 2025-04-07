@@ -1,6 +1,6 @@
 {
   "@author": "J0anJosep",
-  "@jcz-version": "5.11.0",
+  "@jcz-version": "5.12.1",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Fitxer de configuració",
@@ -66,6 +66,7 @@
     "offline": "Fora de línia",
     "penalties": "Penalitzacions",
     "show-available-only": "mostra només els disponibles",
+    "special-figures": "Special figures",
     "the-biggest-city": "La ciutat més gran",
     "the-longest-road": "El camí més llarg",
     "tiles": "Rajoles",
@@ -191,6 +192,7 @@
       "mayor": "Alcalde",
       "phantom": "Fantasma",
       "pig": "Porc",
+      "obelisk": "Obelisc",
       "ringmaster": "Mestre de cerimònies",
       "robber": "Lladre",
       "shepherd": "Pastor",

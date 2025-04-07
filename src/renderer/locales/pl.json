@@ -1,6 +1,6 @@
 {
   "@author": "Snearone",
-  "@jcz-version": "5.11.0",
+  "@jcz-version": "5.12.1",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Plik konfiguracyjny",
@@ -66,6 +66,7 @@
     "offline": "Offline",
     "penalties": "Kary",
     "show-available-only": "Pokaż wyłącznie dostepne",
+    "special-figures": "Special figures",
     "the-biggest-city": "Największe miasto",
     "the-longest-road": "Najdłuższa droga",
     "tiles": "Płytki",
@@ -191,6 +192,7 @@
       "mayor": "Burmistrz",
       "phantom": "Świta",
       "pig": "Świnia",
+      "obelisk": "Obelisk",
       "ringmaster": "Dyrektor cyrku",
       "robber": "Baron Rabusiów",
       "shepherd": "Pasterz",

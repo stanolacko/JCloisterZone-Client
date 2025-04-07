@@ -43,7 +43,8 @@ export default {
         tradeGoods: { title: this.$t('game.feature.trade-goods'), events: [] },
         gold: { title: this.$t('game.feature.gold-ingots'), events: [] },
         kingAndRobber: { title: this.$t('game.feature.king-and-robber'), events: [] },
-        penalties: { title: this.$t('core-messages.penalties'), events: [] }
+        penalties: { title: this.$t('core-messages.penalties'), events: [] },
+        specialfigures: { title: this.$t('core-messages.special-figures'), events: [] }
       }
       item.events.forEach(ev => {
         if (!ev.points?.length) {
@@ -67,6 +68,8 @@ export default {
           rows.monasteries.events.push(ev)
         } else if (type === 'vodyanoy') {
           rows.penalties.events.push(ev)
+        } else if (type === 'obelisk') {
+          rows.specialfigures.events.push(ev)
         } else {
           rows.features.events.push(ev)
         }
