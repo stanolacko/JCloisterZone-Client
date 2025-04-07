@@ -147,5 +147,5 @@ export default {
 
 <style lang="sass" scoped>
 .area.mouseout
-  opacity: 0
+  opacity: 0.25
 </style>
