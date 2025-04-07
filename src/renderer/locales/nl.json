@@ -1,12 +1,11 @@
 {
   "@author": "Kiap1969",
-  "@jcz-version": "5.12.1",
+  "@jcz-version": "5.11.0",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Configuratiebestand",
     "jcloisterzone-game-engine": "JCloisterZone Spelmachine",
     "system-java-version": "Java Versie van het systeem",
-    "title": "JCloisterZone Fan Edition",
     "version": "versie"
   },
   "bookmarks": {
@@ -67,7 +66,6 @@
     "offline": "Offline",
     "penalties": "Strafpunten",
     "show-available-only": "alleen beschikbare tonen",
-    "special-figures": "Special figures",
     "the-biggest-city": "De grootste stad",
     "the-longest-road": "De langste weg",
     "tiles": "Tegels",
@@ -193,7 +191,6 @@
       "mayor": "Burgemeester",
       "phantom": "Fantoom",
       "pig": "Varken",
-      "obelisk": "Obelisk",
       "ringmaster": "Circusdirecteur",
       "robber": "Roofridder",
       "shepherd": "Herder",

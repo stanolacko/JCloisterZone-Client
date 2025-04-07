@@ -85,7 +85,6 @@ export default function () {
     owner: 'farin',
     repo: 'JCloisterZone-Client'
   })
-  /* Fan Edition
   autoUpdater.checkForUpdates().then(result => {
     // console.log(result)
     if (compareVersions(result.updateInfo.version, app.getVersion()) === 1) {
@@ -97,7 +96,6 @@ export default function () {
   }).catch(err => {
     console.error(err)
   })
-  Fan Edition */
 
   return {
     winCreated (_win) {

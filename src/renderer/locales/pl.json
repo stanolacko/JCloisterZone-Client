@@ -1,12 +1,11 @@
 {
   "@author": "Snearone",
-  "@jcz-version": "5.12.1",
+  "@jcz-version": "5.11.0",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Plik konfiguracyjny",
     "jcloisterzone-game-engine": "Silnik gry JCloisterZone",
     "system-java-version": "Wersja systemowa Java",
-    "title": "JCloisterZone Fan Edition",
     "version": "wersja"
   },
   "bookmarks": {
@@ -67,7 +66,6 @@
     "offline": "Offline",
     "penalties": "Kary",
     "show-available-only": "Pokaż wyłącznie dostepne",
-    "special-figures": "Special figures",
     "the-biggest-city": "Największe miasto",
     "the-longest-road": "Najdłuższa droga",
     "tiles": "Płytki",
@@ -193,7 +191,6 @@
       "mayor": "Burmistrz",
       "phantom": "Świta",
       "pig": "Świnia",
-      "obelisk": "Obelisk",
       "ringmaster": "Dyrektor cyrku",
       "robber": "Baron Rabusiów",
       "shepherd": "Pasterz",

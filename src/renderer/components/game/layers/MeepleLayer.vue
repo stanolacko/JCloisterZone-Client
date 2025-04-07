@@ -5,20 +5,19 @@
       because selection operates with meeple positions and position change if meeples are stacked
       it's easier handle all at same place
     -->
-
     <g
-      v-for="meeple in cornerMeeples"
+      v-for="meeple in barns"
       :key="meeple.id"
       :transform="transformPosition(meeple.position)"
       :class="colorCssClass(meeple.player)"
     >
       <use
         class="meeple"
-        :x="-MEEPLE_SIZE * meeple.sizeCoeficient / 2"
-        :y="-MEEPLE_SIZE * meeple.sizeCoeficient / 2"
-        :width="MEEPLE_SIZE * meeple.sizeCoeficient"
-        :height="MEEPLE_SIZE * meeple.sizeCoeficient"
-        :href="`${MEEPLES_SVG}#${svgMeepleId(meeple)}`"
+        :x="-MEEPLE_SIZE / 2"
+        :y="-MEEPLE_SIZE / 2"
+        :width="MEEPLE_SIZE"
+        :height="MEEPLE_SIZE"
+        :href="`${MEEPLES_SVG}#barn`"
       />
       <g
         v-if="meeple.selectable"
@@ -27,7 +26,7 @@
         <circle
           cx="0"
           cy="0"
-          :r="BASE_SIZE * meeple.circleSizeCoeficient"
+          :r="BASE_SIZE * 0.27"
           :class="{'color-stroke': true, mouseover: mouseOver === meeple.selectable }"
           :style="{'pointer-events': 'none'}"
           fill="none"
@@ -41,7 +40,7 @@
         <circle
           cx="0"
           cy="0"
-          :r="BASE_SIZE * meeple.circleSizeCoeficient"
+          :r="BASE_SIZE * 0.305"
           :style="{'pointer-events': 'all', fill: 'none'}"
           @mouseenter="meepleSelect.local && onMouseOver(meeple.selectable)"
           @mouseleave="meepleSelect.local && onMouseLeave(meeple.selectable)"
@@ -235,25 +234,16 @@ export default {
       isDeployedOnBridge: 'game/isDeployedOnBridge'
     }),
 
-    cornerMeeples () {
+    barns () {
       if (this.deployedOnBridge) {
         return []
       }
 
       const selectable = this.meepleSelect ? keyBy(this.meepleSelect.options, 'meepleId') : null
-      return this.$store.state.game.deployedMeeples.filter(m => m.type === 'Barn' || m.type === 'Obelisk').map(meeple => {
-        switch(meeple.type) {
-          case 'Obelisk':
-          	meeple.sizeCoeficient = 1.5
-          	meeple.circleSizeCoeficient = 0.305
-          	break
-          default:
-          	meeple.sizeCoeficient = 1
-          	meeple.circleSizeCoeficient = 0.27
-		}          
+      return this.$store.state.game.deployedMeeples.filter(m => m.type === 'Barn').map(barn => {
         return {
-          ...meeple,
-          selectable: selectable && selectable[meeple.id]
+          ...barn,
+          selectable: selectable && selectable[barn.id]
         }
       })
     },
@@ -270,7 +260,7 @@ export default {
       })
 
       const selectable = this.meepleSelect ? keyBy(this.meepleSelect.options, 'meepleId') : null
-      const filtered = this.$store.state.game.deployedMeeples.filter(m => m.type !== 'Barn' && m.type !== 'Obelisk' && !this.isDeployedOnBridge(m) ^ this.deployedOnBridge)
+      const filtered = this.$store.state.game.deployedMeeples.filter(m => m.type !== 'Barn' && !this.isDeployedOnBridge(m) ^ this.deployedOnBridge)
       const groupped = groupBy(filtered, getGroupKey)
       const neutralInGroup = {}
       const groups = Object.entries(groupped).map(([key, meeples]) => {

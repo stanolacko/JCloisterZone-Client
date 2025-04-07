@@ -1,12 +1,11 @@
 {
-  "@author": "Paloi Sciurala",
-  "@jcz-version": "5.12.1",
+  "@author": "NGC 54",
+  "@jcz-version": "5.11.0",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Fișier de configurație",
     "jcloisterzone-game-engine": "Motorul Jocului JCloisterZone",
     "system-java-version": "Versiunea de sistem Java",
-    "title": "JCloisterZone Fan Edition",
     "version": "versiune"
   },
   "bookmarks": {
@@ -67,7 +66,6 @@
     "offline": "Offline",
     "penalties": "Penalități",
     "show-available-only": "arată numai ceea ce este disponibil",
-    "special-figures": "Special figures",
     "the-biggest-city": "Cel mai mare oraș",
     "the-longest-road": "Cel mai lung drum",
     "tiles": "Cartonașe",
@@ -193,7 +191,6 @@
       "mayor": "Primar",
       "phantom": "Fantomă",
       "pig": "Porc",
-      "obelisk": "Obelisc",
       "ringmaster": "Director de circ",
       "robber": "Cavalerul brigand",
       "shepherd": "Oier",

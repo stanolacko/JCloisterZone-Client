@@ -1,12 +1,11 @@
 {
   "@author": "Peťul",
-  "@jcz-version": "5.12.1",
-  "@version": "0.4.1",
+  "@jcz-version": "5.10.2",
+  "@version": "0.4.0",
   "about": {
     "configuration-file": "Konfigurační soubor",
     "jcloisterzone-game-engine": "Herní engine JCloisterZone",
     "system-java-version": "Verze systému Java",
-    "title": "JCloisterZone Fan Edition",
     "version": "verze"
   },
   "bookmarks": {
@@ -67,7 +66,6 @@
     "offline": "Offline",
     "penalties": "Pokuty",
     "show-available-only": "Zobrazit pouze vybrané",
-    "special-figures": "Speciální figurky",
     "the-biggest-city": "Největší město",
     "the-longest-road": "Nejdelší cesta",
     "tiles": "Kartičky",
@@ -192,7 +190,6 @@
       "mage": "Mág",
       "mayor": "Starosta",
       "phantom": "Fantom",
-      "obelisk": "Obelisk",
       "pig": "Prasátko",
       "ringmaster": "Ředitel",
       "robber": "Loupeživý rytíř",

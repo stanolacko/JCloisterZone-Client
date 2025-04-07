@@ -53,8 +53,7 @@ const TITLE_MAPPING = {
   'special-monastery': 'game.feature.special-monastery',
   'gold': 'game.feature.gold-ingots',
   'vodyanoy': 'game.feature.vodyanoy',
-  'watchtower': 'game.feature.watchtower',
-  'obelisk': 'game.element.obelisk'
+  'watchtower': 'game.feature.watchtower'
 }
 
 const SUBTITLE_MAPPING = {

@@ -1,12 +1,11 @@
 {
   "@author": "farin",
-  "@jcz-version": "5.12.1",
-  "@version": "0.4.1",
+  "@jcz-version": "5.10.2",
+  "@version": "0.4.0",
   "about": {
     "configuration-file": "Configuration file",
     "jcloisterzone-game-engine": "JCloisterZone Game Engine",
     "system-java-version": "System Java Version",
-    "title": "JCloisterZone Fan Edition",
     "version": "version"
   },
   "bookmarks": {
@@ -67,7 +66,6 @@
     "offline": "Offline",
     "penalties": "Penalties",
     "show-available-only": "show available only",
-    "special-figures": "Special figures",
     "the-biggest-city": "The Biggest City",
     "the-longest-road": "The Longest Road",
     "tiles": "Tiles",
@@ -193,7 +191,6 @@
       "mayor": "Mayor",
       "phantom": "Phantom",
       "pig": "Pig",
-      "obelisk": "Obelisk",
       "ringmaster": "Ringmaster",
       "robber": "Robber Barron",
       "shepherd": "Shepherd",

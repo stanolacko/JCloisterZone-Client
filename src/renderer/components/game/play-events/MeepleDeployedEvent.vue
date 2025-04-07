@@ -41,7 +41,6 @@ export default {
           emphasis: {
             type: 'meeple',
             barn: this.ev.meeple === 'Barn',
-            obelisk: this.ev.meeple === 'Obelisk',
             ...this.ev.to
           }
         }

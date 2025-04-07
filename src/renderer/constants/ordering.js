@@ -9,8 +9,7 @@ export const FOLLOWER_ORDERING = {
   Shepherd: 60,
   Builder: 70,
   Pig: 80,
-  Barn: 90,
-  Obelisk: 100
+  Barn: 90
 }
 
 export const TOKEN_ORDERING = {

@@ -6,7 +6,7 @@
 module.exports = {
   ssr: false,
   head: {
-    title: 'JCloisterZoneFan',
+    title: 'JCloisterZone',
     meta: [
       { charset: 'utf-8' }
     ]

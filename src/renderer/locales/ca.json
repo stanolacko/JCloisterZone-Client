@@ -1,12 +1,11 @@
 {
   "@author": "J0anJosep",
-  "@jcz-version": "5.12.1",
+  "@jcz-version": "5.11.0",
   "@version": "0.4.1",
   "about": {
     "configuration-file": "Fitxer de configuració",
     "jcloisterzone-game-engine": "Motor de joc del JCloisterZone",
     "system-java-version": "Versió del Java del sistema",
-    "title": "JCloisterZone Fan Edition",
     "version": "versió"
   },
   "bookmarks": {
@@ -67,7 +66,6 @@
     "offline": "Fora de línia",
     "penalties": "Penalitzacions",
     "show-available-only": "mostra només els disponibles",
-    "special-figures": "Special figures",
     "the-biggest-city": "La ciutat més gran",
     "the-longest-road": "El camí més llarg",
     "tiles": "Rajoles",
@@ -193,7 +191,6 @@
       "mayor": "Alcalde",
       "phantom": "Fantasma",
       "pig": "Porc",
-      "obelisk": "Obelisc",
       "ringmaster": "Mestre de cerimònies",
       "robber": "Lladre",
       "shepherd": "Pastor",

@@ -9,7 +9,7 @@
       :transform="transformPosition(opt.position)"
     >
       <circle
-        v-if="meeple == 'Barn' || meeple == 'Obelisk'"
+        v-if="meeple == 'Barn'"
         :x="0" :y="0" r="400"
         :class="{ area: true, mouseover: opt === mouseOver, mouseout: opt !== mouseOver }"
         @mouseenter="onMouseOver(opt)"
@@ -147,5 +147,5 @@ export default {
 
 <style lang="sass" scoped>
 .area.mouseout
-  opacity: 0.25
+  opacity: 0
 </style>
