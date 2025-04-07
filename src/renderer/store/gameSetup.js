@@ -192,6 +192,10 @@ export const actions = {
       commit('elementConfig', { id: 'mage', config })
     } else if (id === 'abbot') {
       commit('elementConfig', { id: 'garden', config })
+    } else if (id === 'garden') {
+      if (config) {
+        commit('elementConfig', { id: 'abbot', config })
+      }
     }
   },
 
