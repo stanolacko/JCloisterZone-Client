@@ -174,7 +174,7 @@
             </g>
           </svg>
         </div>
-        <div v-for="(val, idx) in stats.points.bigtop" :key="'acrobats-'+idx" class="bigtop value">
+        <div v-for="(val, idx) in stats.points.acrobats" :key="'acrobats-'+idx" class="acrobats value">
           {{ val }}
         </div>
       </template>
