@@ -42,6 +42,9 @@ export const MAYOR = GameElement.MAYOR = new GameElement('mayor', 'Mayor', Numbe
 export const SHEPHERD = GameElement.SHEPHERD = new GameElement('shepherd', 'Shepherd', Number, { default: 0 })
 export const RINGMASTER = GameElement.RINGMASTER = new GameElement('ringmaster', 'Ringmaster', Number, { default: 0 })
 
+// Fan figures
+export const OBELISK = GameElement.OBELISK = new GameElement('obelisk', 'Obelisk', Number, { default: 0 })
+
 // Neutral
 export const DRAGON = GameElement.DRAGON = new GameElement('dragon', 'Dragon', Number, { selector: 'dragon' })
 export const FAIRY = GameElement.FAIRY = new GameElement('fairy', 'Fairy', Number, { default: 0 })

@@ -9,7 +9,7 @@
       :transform="transformPosition(opt.position)"
     >
       <circle
-        v-if="meeple == 'Barn'"
+        v-if="meeple == 'Barn' || meeple == 'Obelisk'"
         :x="0" :y="0" r="400"
         :class="{ area: true, mouseover: opt === mouseOver, mouseout: opt !== mouseOver }"
         @mouseenter="onMouseOver(opt)"

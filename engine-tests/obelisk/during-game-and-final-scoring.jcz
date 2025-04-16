@@ -1,0 +1,497 @@
+{
+  "appVersion": "5.12.1",
+  "gameId": "c5769c0106924d75beae53607a1d9a76",
+  "name": "",
+  "initialRandom": 0.4545946671818091,
+  "created": "2025-04-14T09:48:09.851Z",
+  "clock": 100796,
+  "setup": {
+    "options": {},
+    "sets": {
+      "basic:1": 1
+    },
+    "elements": {
+      "small-follower": 7,
+      "farmers": true,
+      "obelisk": 1
+    },
+    "rules": {},
+    "timer": null,
+    "start": [
+      {
+        "tile": "BA/RCr",
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    ]
+  },
+  "players": [
+    {
+      "name": "Ariel",
+      "slot": 0,
+      "clientId": "fdf7ce65d30449bdbbfdb4fd5360c111"
+    },
+    {
+      "name": "Andy",
+      "slot": 3,
+      "clientId": "fdf7ce65d30449bdbbfdb4fd5360c111"
+    }
+  ],
+  "replay": [
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RFr",
+        "rotation": "R0",
+        "position": [
+          -1,
+          0
+        ]
+      },
+      "player": 0,
+      "clock": 2985
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 4053
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.9174478691923178
+      },
+      "player": 0,
+      "clock": 4064
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RFr",
+        "rotation": "R0",
+        "position": [
+          -1,
+          1
+        ]
+      },
+      "player": 1,
+      "clock": 5599
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 1,
+      "clock": 5834
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.09659689945568717
+      },
+      "player": 1,
+      "clock": 5841
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RFr",
+        "rotation": "R0",
+        "position": [
+          0,
+          1
+        ]
+      },
+      "player": 0,
+      "clock": 7063
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            0,
+            1
+          ],
+          "location": "NL.NR.EL.WR",
+          "feature": "Field"
+        },
+        "meepleId": "0.obelisk.1"
+      },
+      "player": 0,
+      "clock": 11520
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.7356050378724297
+      },
+      "player": 0,
+      "clock": 12059
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RCr",
+        "rotation": "R180",
+        "position": [
+          0,
+          -1
+        ]
+      },
+      "player": 1,
+      "clock": 13796
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 1,
+      "clock": 14239
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.826603349047411
+      },
+      "player": 1,
+      "clock": 14253
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RFr",
+        "rotation": "R0",
+        "position": [
+          -2,
+          0
+        ]
+      },
+      "player": 0,
+      "clock": 16695
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 17612
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.6062811561747614
+      },
+      "player": 0,
+      "clock": 17621
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/LR",
+        "rotation": "R270",
+        "position": [
+          -2,
+          1
+        ]
+      },
+      "player": 1,
+      "clock": 19390
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            -1,
+            1
+          ],
+          "location": "NL.NR.EL.WR",
+          "feature": "Field"
+        },
+        "meepleId": "1.obelisk.1"
+      },
+      "player": 1,
+      "clock": 21450
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.2092236863226271
+      },
+      "player": 1,
+      "clock": 21885
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/LR",
+        "rotation": "R90",
+        "position": [
+          1,
+          1
+        ]
+      },
+      "player": 0,
+      "clock": 30759
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 31286
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.9544678157595068
+      },
+      "player": 0,
+      "clock": 31296
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RFr",
+        "rotation": "R0",
+        "position": [
+          1,
+          0
+        ]
+      },
+      "player": 1,
+      "clock": 32913
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 1,
+      "clock": 33152
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.08481774683118593
+      },
+      "player": 1,
+      "clock": 33162
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RFr",
+        "rotation": "R0",
+        "position": [
+          1,
+          -1
+        ]
+      },
+      "player": 0,
+      "clock": 34719
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 34920
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.7988864394960706
+      },
+      "player": 0,
+      "clock": 34940
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/Rr",
+        "rotation": "R180",
+        "position": [
+          -1,
+          -1
+        ]
+      },
+      "player": 1,
+      "clock": 36350
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 1,
+      "clock": 36514
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.3994543251892546
+      },
+      "player": 1,
+      "clock": 36522
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/Rr",
+        "rotation": "R90",
+        "position": [
+          -2,
+          -1
+        ]
+      },
+      "player": 0,
+      "clock": 37899
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 38014
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.8634543976704427
+      },
+      "player": 0,
+      "clock": 38020
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RRR",
+        "rotation": "R0",
+        "position": [
+          1,
+          2
+        ]
+      },
+      "player": 1,
+      "clock": 41318
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 1,
+      "clock": 41473
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.13456637842198793
+      },
+      "player": 1,
+      "clock": 41481
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RRR",
+        "rotation": "R0",
+        "position": [
+          0,
+          2
+        ]
+      },
+      "player": 0,
+      "clock": 43100
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 43404
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.16870842328660096
+      },
+      "player": 0,
+      "clock": 43416
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RRR",
+        "rotation": "R0",
+        "position": [
+          -1,
+          2
+        ]
+      },
+      "player": 1,
+      "clock": 44856
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 1,
+      "clock": 45084
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.8684038925225337
+      },
+      "player": 1,
+      "clock": 45104
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RRR",
+        "rotation": "R0",
+        "position": [
+          -2,
+          2
+        ]
+      },
+      "player": 0,
+      "clock": 87184
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 88951
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.2493852128536751
+      },
+      "player": 0,
+      "clock": 88961
+    }
+  ],
+  "gameAnnotations": {
+    "drawOrder": [
+      "BA/RFr",
+      "BA/RFr",
+      "BA/RFr",
+      "BA/RCr",
+      "BA/RFr",
+      "BA/LR",
+      "BA/LR",
+      "BA/RFr",
+      "BA/RFr",
+      "BA/Rr",
+      "BA/Rr",
+      "BA/RRR",
+      "BA/RRR",
+      "BA/RRR",
+      "BA/RRR"
+    ],
+    "endTurn": 15
+  },
+  "test": {
+    "description": "During Game And Final Scoring",
+    "assertions": [
+      "Ariel scored obelisk for 16 points.",
+      "Andy scored obelisk for 12 points.",
+      "Ariel has 16 points.",
+      "Andy has 12 points."
+    ]
+  }
+}
