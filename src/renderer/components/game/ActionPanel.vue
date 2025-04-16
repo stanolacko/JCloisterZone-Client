@@ -8,15 +8,6 @@
         Host terminated the game. Connection was closed.
       </v-alert>
     </div>
-    <div v-else-if="notifyConnectionReconnecting" class="flex-grow-1">
-      <v-alert type="error">
-        Connection interrupted. Reconnecting&hellip;
-        <v-progress-linear
-          indeterminate
-          color="white"
-        />
-      </v-alert>
-    </div>
     <PointsExpression
       v-else-if="pointsExpression"
       :expr="pointsExpression"
@@ -25,7 +16,7 @@
     <component
       :is="actionComponent"
       v-if="action"
-      v-show="!pointsExpression && !notifyConnectionClosed && !notifyConnectionReconnecting"
+      v-show="!pointsExpression && !notifyConnectionClosed"
       :action="action"
       :phase="phase"
       :local="local"
@@ -35,13 +26,13 @@
         #default="{ plain, label }"
       >
         <template v-if="local">
-          <span v-if="plain !== ''" class="skip-text text">or</span>
+          <span v-if="plain !== ''" class="skip-text text">{{ $t('game.action.or') }}</span>
           <div class="pass-item">
-            <v-btn :large="$vuetify.breakpoint.height > 768" color="secondary" @click="pass">{{ label || 'Skip action' }}</v-btn>
+            <v-btn :large="$vuetify.breakpoint.height > 768" color="secondary" @click="pass">{{ label || $t('game.action.skip-action') }}</v-btn>
           </div>
         </template>
         <template v-else>
-          <span class="skip-text text">or skip the action</span>
+          <span class="skip-text text">{{ $t('game.action.or') }} {{ $t('game.action.skip-action') }}</span>
         </template>
       </template>
     </component>
@@ -159,10 +150,6 @@ export default {
       return this.connectionState === null && this.phase !== 'GameOverPhase'
     },
 
-    notifyConnectionReconnecting () {
-      return this.connectionState === 'reconnecting'
-    },
-
     actionComponent () {
       const itemType = this.action.items.length ? this.action.items[0].type : null
       if (itemType === 'Confirm') {
@@ -244,7 +231,7 @@ export default {
     },
 
     onKeyDown (ev) {
-      if (ev.key === ' ' && this.action.canPass && !this.$store.state.gameDialog) {
+      if (ev.key === ' ' && this.action?.canPass && !this.$store.state.gameDialog) {
         this.pass()
       }
     },
@@ -259,6 +246,7 @@ export default {
     },
 
     async onPlayerActivated () {
+      this.$store.commit('board/pointsExpression', null)
       if (this.beep) {
         this.$refs.beep.play()
       }

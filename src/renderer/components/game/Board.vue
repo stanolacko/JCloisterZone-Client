@@ -7,11 +7,13 @@
     @wheel.passive="onWheel"
     @mousedown="onMouseDown"
     @mousemove="onMouseMove"
-    @mouseup="onMouseUp"
     @click.right="onRightClick"
   >
     <g :transform="transform">
       <TileLayer />
+    </g>
+    <FarmHintsLayer v-if="layers.FarmHintsLayer" :global-transform="transform" />
+    <g :transform="transform">
       <TilePlacementLayer
         v-if="layers.TilePlacementLayer"
         v-bind="layers.TilePlacementLayer"
@@ -81,6 +83,7 @@ import CastleLayer from '@/components/game/layers/CastleLayer'
 import CastleBaseSelectLayer from '@/components/game/layers/CastleBaseSelectLayer'
 import DragonMoveLayer from '@/components/game/layers/DragonMoveLayer'
 import EmphasizeLayer from '@/components/game/layers/EmphasizeLayer'
+import FarmHintsLayer from '@/components/game/layers/FarmHintsLayer'
 import FerryChangeLayer from '@/components/game/layers/FerryChangeLayer'
 import FlierLayer from '@/components/game/layers/FlierLayer'
 import TokenLayer from '@/components/game/layers/TokenLayer'
@@ -94,6 +97,7 @@ import TileSelectLayer from '@/components/game/layers/TileSelectLayer'
 import TowerSelectLayer from '@/components/game/layers/TowerSelectLayer'
 import TunnelSelectLayer from '@/components/game/layers/TunnelSelectLayer'
 import WagonPhaseLayer from '@/components/game/layers/WagonPhaseLayer'
+import { BASE_SIZE } from '@/constants/ui'
 
 const ACTION_PANEL_HEIGHT = 160
 const KEY_PRESSED_OFFSET = 30
@@ -106,6 +110,7 @@ export default {
     CastleBaseSelectLayer,
     DragonMoveLayer,
     EmphasizeLayer,
+    FarmHintsLayer,
     FeatureSelectLayer,
     FerryChangeLayer,
     FlierLayer,
@@ -125,7 +130,8 @@ export default {
     return {
       offsetX: 0,
       offsetY: 0,
-      overlay: false
+      overlay: false,
+      rotate: 0
     }
   },
 
@@ -133,7 +139,7 @@ export default {
     ...mapState({
       layers: state => state.board.layers,
       dragging: state => state.board.dragging,
-      zoom: state => state.board.zoom,
+      zoom: state => state.board.zoom.toFixed(3),
       elements: state => state.game.setup ? state.game.setup.elements : {}
     }),
 
@@ -142,11 +148,13 @@ export default {
     }),
 
     transform () {
-      return `translate(${this.offsetX} ${this.offsetY}) scale(${this.zoom} ${this.zoom})`
+      const x = this.offsetX
+      const y = this.offsetY
+      return `rotate(${this.rotate} ${x} ${y}) translate(${x} ${y}) scale(${this.zoom} ${this.zoom})`
     },
 
     tileSize () {
-      return Math.round(1000 * this.zoom)
+      return Math.round(BASE_SIZE * this.zoom)
     },
 
     boardWidth () {
@@ -172,23 +180,30 @@ export default {
     }
 
     this.pressedKeys = {}
-    window.addEventListener('keydown', this.onKeyDown)
-    window.addEventListener('keyup', this.onKeyUp)
-    window.addEventListener('mouseup', this.onMouseUp) // reset it even if mouse is putside
+    // this._onKeyDown = this.onKeyDown.bind(this)
+    // this._onKeyUp = this.onKeyUp.bind(this)
+    // this._stopDragging = this.stopDragging.bind(this)
+    document.addEventListener('keydown', this.onKeyDown)
+    document.addEventListener('keyup', this.onKeyUp)
+    document.addEventListener('mouseup', this.stopDragging) // reset it even if mouse is outside
+    document.addEventListener('mouseleave', this.stopDragging)
     this.$root.$on('request-zoom', this.onRequestZoom)
+    this.$root.$on('request-rotate', this.onRequestRotate)
   },
 
   beforeDestroy () {
     clearInterval(this.pressedKeysInterval)
-    window.removeEventListener('keydown', this.onKeyDown)
-    window.removeEventListener('keyup', this.onKeyUp)
-    window.removeEventListener('mouseup', this.onMouseUp)
+    document.removeEventListener('keydown', this.onKeyDown)
+    document.removeEventListener('keyup', this.onKeyUp)
+    document.removeEventListener('mouseup', this.stopDragging)
+    document.removeEventListener('mouseleave', this.stopDragging)
     this.$root.$off('request-zoom', this.onRequestZoom)
+    this.$root.$off('request-rotate', this.onRequestRotate)
   },
 
   methods: {
     onKeyDown (ev) {
-      if (['a', 's', 'd', 'w'].includes(ev.key) && !this.$store.state.gameDialog) {
+      if (['a', 's', 'd', 'w', 'r'].includes(ev.key) && !this.$store.state.gameDialog) {
         if (ev.ctrlKey || ev.metaKey || ev.altKey || ev.shiftKey) {
           return
         }
@@ -206,6 +221,10 @@ export default {
             }
             if (this.pressedKeys.s) {
               this.offsetY += KEY_PRESSED_OFFSET
+              pressed = true
+            }
+            if (this.pressedKeys.r) {
+              this.changeRotate()
               pressed = true
             }
             if (this.pressedKeys.w) {
@@ -284,13 +303,15 @@ export default {
       }
     },
 
-    onMouseUp (ev) {
-      if (ev.button === 0) {
+    stopDragging (ev) {
+      if (this.dragging) {
         // let resolve first click handler
-        // (it is ignored if mouse is )
+        // (it should be ignored if mouse is dragging)
         setTimeout(() => {
           Vue.nextTick(() => {
-            this.dragging && this.$store.commit('board/dragging', null)
+            this.offsetX = Math.round(this.offsetX)
+            this.offsetY = Math.round(this.offsetY)
+            this.$store.commit('board/dragging', null)
           })
         })
       }
@@ -320,10 +341,24 @@ export default {
       if (this.offsetY > maxY) {
         this.offsetY = maxY
       }
-    }
+    },
+
+    onRequestRotate () {
+      this.changeRotate()
+    },
+
+    changeRotate () {
+      const rotate = (this.rotate + 90) % 360
+      this.$store.commit('board/changeRotate', rotate)
+      this.rotate = rotate
+      this.adjustAfterMove()
+    },
+
   }
 }
 </script>
 
-<style>
+<style lang="sass" scoped>
+.board
+  user-select: none
 </style>

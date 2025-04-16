@@ -1,23 +1,56 @@
 <template>
   <GameSetupGrid v-if="loaded && gameId" :sets="sets" :rules="rules">
     <template #header>
-      <template v-if="isOwner">
-        <HeaderGameButton
-          title="Start"
-          :info="slotsAssigned ? null : (readOnly ? 'Assign all players to start' : 'No player in game')"
-          @click="startGame"
-        />
-      </template>
+      <div
+        v-if="gameKey"
+        class="game-name"
+        :class="{ editable: isOwner && !readOnly }"
+        @click.stop="showRenameDialog"
+      >
+        <v-icon v-if="isOwner && !readOnly">fas fa-pencil-alt</v-icon>
+        {{ name }}
+        <span v-if="!name" class="unnamed">{{ $t('game-setup.open-game.untitled-game') }}</span>
+      </div>
+
+      <HeaderMessage
+        :sets="sets"
+        :info="slotsAssigned ? null : (readOnly ? $t('game-setup.open-game.assign-all-players-to-start') : $t('game-setup.open-game.no-player-in-game') )"
+      />
+
+      <div v-if="gameKey" class="game-key">
+        <v-tooltip bottom :open-delay="200">
+          <template #activator="{ on, attrs }">
+            <span
+              class="key-title"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon>far fa-question-circle</v-icon>
+            </span>
+          </template>
+          <span>{{ $t('game-setup.open-game.share-the-key') }}</span>
+        </v-tooltip>
+        <strong @click="selectOnClick">{{ gameKey }}</strong>
+      </div>
+
+      <HeaderGameButton
+        v-if="isOwner"
+        :title="$t('button.start')"
+        :sets="sets"
+        :disabled="!slotsAssigned"
+        @click="startGame"
+      />
+
       <template v-else>
-        <span class="text">Waiting for host to start the game.</span>
+        <span class="text">{{ $t('game-setup.open-game.waiting-for-host-to-start-the-game') }}</span>
       </template>
     </template>
 
     <template #main>
-      <div v-if="pin" class="pin">
-        <span>Share the key with other players to let them connect to your game.</span>
-        <strong>{{ pin }}</strong>
-      </div>
+      <!--div v-if="gameKey" class="game-key">
+        <span>Share the key with other players to let them connect to the game.</span>
+        <strong @click="selectOnClick">{{ gameKey }}</strong>
+      </--div-->
 
       <div class="slots">
         <PlayerSlot
@@ -30,22 +63,40 @@
           :read-only="readOnly"
         />
       </div>
+
+      <v-dialog v-model="isRenameDialogOpen" max-width="600px">
+        <v-card>
+          <v-card-title>
+            <span class="headline">{{ $t('game-setup.open-game.set-game-title') }}</span>
+          </v-card-title>
+          <v-card-text>
+            <v-container>
+              <v-text-field ref="gameTitleInput" v-model="editName" :label="$t('game-setup.open-game.name')" @keydown.enter="renameGame" />
+            </v-container>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer />
+            <v-btn text @click="isRenameDialogOpen = false">{{ $t('button.cancel') }}</v-btn>
+            <v-btn text @click="renameGame">{{ $t('button.confirm') }}</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </template>
 
     <template #detail>
       <div class="options">
-        <h2>Options</h2>
+        <h2>{{ $t('game-setup.open-game.options') }}</h2>
         <v-checkbox
           v-if="!readOnly"
           v-model="randomizeSeating"
           dense hide-details
-          label="Randomize seating order"
+          :label="$t('game-setup.open-game.randomize-seating-order')"
           :disabled="!isOwner"
         />
         <v-checkbox
           v-model="puristTiles"
           dense hide-details
-          label="Hide remaining tiles cheat sheet"
+          :label="$t('game-setup.open-game.hide-remaining-tiles-cheat-sheet')"
           :disabled="readOnly || !isOwner"
         />
       </div>
@@ -61,6 +112,7 @@ import { mapGetters, mapState } from 'vuex'
 import GameSetupOverview from '@/components/game-setup/overview/GameSetupOverview'
 import GameSetupGrid from '@/components/game-setup/GameSetupGrid'
 import HeaderGameButton from '@/components/game-setup/HeaderGameButton'
+import HeaderMessage from '@/components/game-setup/HeaderMessage'
 import PlayerSlot from '@/components/game-setup/PlayerSlot'
 
 export default {
@@ -68,11 +120,14 @@ export default {
     GameSetupOverview,
     GameSetupGrid,
     HeaderGameButton,
+    HeaderMessage,
     PlayerSlot
   },
 
   data () {
     return {
+      isRenameDialogOpen: false,
+      editName: null,
       // do not updata it after start when gameMessages are set to empty array
       readOnly: this.$store.state.game.gameMessages !== null
     }
@@ -80,14 +135,15 @@ export default {
 
   computed: {
     ...mapState({
-      pin: state => state.game.pin,
+      gameKey: state => state.game.key,
       setup: state => state.game.setup,
       sets: state => state.game.setup?.sets,
       rules: state => state.game.setup?.rules,
       gameId: state => state.game.id,
+      name: state => state.game.name,
       options: state => state.game.setup?.options,
       slots: state => state.game.slots,
-      isOwner: state => state.game.owner === state.networking.sessionId
+      isOwner: state => state.game.owner === state.settings.clientId
     }),
 
     ...mapGetters({
@@ -141,17 +197,10 @@ export default {
 
   beforeCreate () {
     // useful for dev mode, reload on this page redirects back to home
-    if (!this.$connection.isConnectedOrConnecting()) {
+    if (!this.$store.state.networking.connectionType) {
       this.$store.dispatch('game/close')
       this.$router.push('/')
     }
-  },
-
-  mounted () {
-    this.$connection.on('close', this._onClose = () => {
-      // TODO print message
-      this.$router.push('/')
-    })
   },
 
   beforeDestroy () {
@@ -161,34 +210,79 @@ export default {
   methods: {
     startGame () {
       this.$store.dispatch('game/start')
+    },
+
+    renameGame () {
+      this.$store.dispatch('game/rename', this.editName)
+      this.isRenameDialogOpen = false
+    },
+
+    selectOnClick (ev) {
+      const selection = window.getSelection()
+      const range = document.createRange()
+      range.selectNodeContents(ev.target)
+      selection.removeAllRanges()
+      selection.addRange(range)
+    },
+
+    showRenameDialog () {
+      this.editName = this.name
+      this.isRenameDialogOpen = true
+      setTimeout(() => {
+        this.$refs.gameTitleInput.focus()
+        this.$refs.gameTitleInput.$el.querySelector('input').setAttribute('maxlength', 40)
+      }, 1)
     }
   }
 }
 </script>
 
 <style lang="sass" scoped>
+.game-name
+  flex-grow: 1
+  font-size: 20px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+  &.editable
+    cursor: pointer
+
+  .v-icon
+    position: relative
+    margin-right: 10px
+    top: -3px
+
+  .unnamed
+    font-style: italic
+
+.game-key
+  margin-right: 20px
+  position: relative
+  display: flex
+  align-items: center
+
+  .key-title
+    opacity: 0.6
+
+  strong
+    font-size: 26px
+    font-weight: 400
+    letter-spacing: 0.5px
+    margin-left: 10px
+    padding: 4px 10px
+    border-radius: 6px
+    cursor: pointer
+    white-space: nowrap
+
+    +theme using ($theme)
+      color: map-get($theme, 'text-color')
+      background: map-get($theme, 'cards-selected-bg')
+
 header .v-alert
   position: relative
   top: 8px
   width: 300px
-
-.pin
-  margin: 20px 30px -20px
-  text-align: right
-
-  span
-    font-style: italic
-
-  strong
-    font-size: 30px
-    font-weight: 400
-    letter-spacing: 0.5px
-    margin-left: 20px
-    padding: 4px 10px
-    border-radius: 6px
-
-    +theme using ($theme)
-      background: map-get($theme, 'cards-selected-bg')
 
 .slots
   padding: 0 30px
@@ -199,8 +293,10 @@ header .v-alert
   margin-top: 40px
 
 .game-setup-overview
-  margin-top: 40px
   margin-bottom: 20px
+
+  +theme using ($theme)
+    background: map-get($theme, 'cards-bg')
 
   ::v-deep .rules
     padding-right: 20px
@@ -219,7 +315,7 @@ h2
     color: map-get($theme, 'gray-text-color')
 
 .options
-  padding: 30px 20px 0
+  padding: 30px 20px 40px
 
 @media (max-width: 1079px)
   .slots

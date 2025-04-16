@@ -4,92 +4,76 @@
     <festival />
     <city>W E</city>
     <city>S</city>
-    <farm city="W">NL NR</farm>
-    <farm city="W S">INNER_FARM</farm>
+    <field city="W">NL NR</field>
+    <field city="W S">I</field>
   </tile>
   <tile id="FE/CcCc">
     <festival />
     <city>N W</city>
     <city>S E</city>
-    <farm city="N S">INNER_FARM</farm>
+    <field city="N S">I</field>
   </tile>
   <tile id="FE/CFR">
     <festival />
-    <city>N</city>
-    <road>S</road>
-    <farm city="N">WL WR SR</farm>
-    <farm city="N">EL ER SL</farm>
-    <wagon-move>
-      <neighbouring>N S</neighbouring>
-    </wagon-move>
+    <city wagon-move="a">N</city>
+    <road wagon-move="a">S</road>
+    <field city="N">WL WR SR</field>
+    <field city="N">EL ER SL</field>
   </tile>
   <tile id="FE/CR">
     <festival />
-    <city>N</city>
-    <road>E</road>
-    <farm city="N">EL</farm>
-    <farm city="N">WL WR SL SR ER</farm>
-    <wagon-move>
-      <neighbouring>N E</neighbouring>
-    </wagon-move>
+    <city wagon-move="a">N</city>
+    <road wagon-move="a">E</road>
+    <field city="N">EL</field>
+    <field city="N">WL WR SL SR ER</field>
   </tile>
   <tile id="FE/CRCR">
     <festival />
-    <city>N</city>
-    <city>S</city>
-    <road>W</road>
-    <road>E</road>
-    <farm city="S">ER</farm>
-    <farm city="S">WL</farm>
-    <farm city="N">EL</farm>
-    <farm city="N">WR</farm>
-    <wagon-move>
-      <neighbouring>N S W E</neighbouring>
-    </wagon-move>
+    <city wagon-move="a">N</city>
+    <city wagon-move="a">S</city>
+    <road wagon-move="a">W</road>
+    <road wagon-move="a">E</road>
+    <field city="S">ER</field>
+    <field city="S">WL</field>
+    <field city="N">EL</field>
+    <field city="N">WR</field>
   </tile>
   <tile id="FE/CRr">
     <festival />
     <road>E S</road>
     <city>N</city>
-    <farm city="N">EL WL WR SR</farm>
-    <farm>ER SL</farm>
+    <field city="N">EL WL WR SR</field>
+    <field>ER SL</field>
   </tile>
   <tile id="FE/LRR">
     <festival />
-    <cloister />
-    <road>S</road>
-    <road>W</road>
-    <farm>WR NL NR EL ER SL</farm>
-    <farm>WL SR</farm>
-    <wagon-move>
-      <neighbouring>CLOISTER W</neighbouring>
-      <neighbouring>CLOISTER S</neighbouring>
-    </wagon-move>
+    <monastery wagon-move="a b" />
+    <road wagon-move="a">S</road>
+    <road wagon-move="b">W</road>
+    <field>WR NL NR EL ER SL</field>
+    <field>WL SR</field>
   </tile>
   <tile id="FE/RC">
     <festival />
-    <city>N</city>
-    <road>W</road>
-    <farm city="N">WR</farm>
-    <farm city="N">EL ER SL SR WL</farm>
-    <wagon-move>
-      <neighbouring>N W</neighbouring>
-    </wagon-move>
+    <city wagon-move="a">N</city>
+    <road wagon-move="a">W</road>
+    <field city="N">WR</field>
+    <field city="N">EL ER SL SR WL</field>
   </tile>
   <tile id="FE/RrC">
     <festival />
     <road>S W</road>
     <city>N</city>
-    <farm city="N">WR EL ER SL</farm>
-    <farm>WL SR</farm>
+    <field city="N">WR EL ER SL</field>
+    <field>WL SR</field>
   </tile>
   <tile id="FE/RrRr">
     <festival />
     <road>N W</road>
     <road>S E</road>
-    <farm>NL WR</farm>
-    <farm>SL ER</farm>
-    <farm>NR EL SR WL</farm>
+    <field>NL WR</field>
+    <field>SL ER</field>
+    <field>NR EL SR WL</field>
   </tile>
   <sets>
     <tile-set id="festival">

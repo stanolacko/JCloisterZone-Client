@@ -3,11 +3,16 @@
     enabled
     :z-index="zIndex"
   >
-    <ExpansionSymbol :expansion="expansion" />
+    <div v-if="expansion.name === '_UNKNOWN'" class="unknown">
+      <v-icon>fas fa-exclamation-triangle</v-icon>
+    </div>
+    <ExpansionSymbol v-else :expansion="expansion" />
 
-    <template #title>{{ title }}</template>
+    <template #title>
+      {{ expansionTitle(expansion.title, expansion.name.toLowerCase().replaceAll('_','-')) }}
+    </template>
     <template #quantity>
-      <div v-if="quantity !== 1" class="quantity tile-set">
+      <div v-if="quantity !== 1 && expansion.name !== '_UNKNOWN'" class="quantity tile-set">
         {{ quantity === -1 ? '*' : quantity }}
       </div>
     </template>
@@ -26,9 +31,20 @@ export default {
 
   props: {
     expansion: { type: Object, required: true },
+    lang: { type: String, required: false },
     title: { type: String, required: true },
     quantity: { type: Number, default: 1 },
     zIndex: { type: Number, default: 1 }
+  },
+  
+  methods: {
+    expansionTitle (originalTitle, id) {
+      const langId = ['expansion', id].join('.')
+      if (this.$te(langId)) {
+        return this.$t(langId)
+      }
+      return originalTitle
+    }
   }
 }
 </script>
@@ -37,4 +53,10 @@ export default {
 .exp-symbol
   width: 70px
   height: 70px
+
+.unknown .v-icon
+  font-size: 54px
+
+  +theme using ($theme)
+    color: map-get($theme, 'removed-color')
 </style>

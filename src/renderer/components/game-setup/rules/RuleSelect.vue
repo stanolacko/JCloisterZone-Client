@@ -11,7 +11,7 @@
     <v-select
       v-if="!readOnly"
       v-model="value"
-      :items="rule.values"
+      :items="values"
       :disabled="!enabled"
       dense
       hide-details
@@ -35,7 +35,8 @@ export default {
   computed: {
     value: {
       get () {
-        return this.setup.rules[this.rule.id]
+        const val = this.setup.rules[this.rule.id]
+        return val === undefined ? this.rule.default : val
       },
 
       set (value) {
@@ -45,9 +46,18 @@ export default {
         this.$store.dispatch('gameSetup/setRuleConfig', { id: this.rule.id, config: value })
       }
     },
+    
+    values() {
+      return this.rule.values.map(value => {
+        return {
+          text: this.$t(['game-setup.variant',this.rule.id,value.value].join('.')),
+          value: value.value
+        }
+      });
+    },
 
     title () {
-      return this.rule.values.find(v => v.value === this.value).text
+      return this.$t(['game-setup.variant',this.rule.id,this.value].join('.'))
     }
   }
 }

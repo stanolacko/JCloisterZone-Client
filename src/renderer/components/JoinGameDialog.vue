@@ -1,9 +1,11 @@
 <template>
   <v-card class="about">
-    <v-card-title class="headline">Join Remote Game</v-card-title>
+    <v-card-title class="headline">{{ $t('join-game.title') }}</v-card-title>
     <v-card-text>
-      Connect to remote host with created game.<br>
-      <i>The must on remote host must be in color selection phase.</i>
+      {{ $t('join-game.connect-to-remote-host') }}
+      <div>
+        <i>{{ $t('join-game.description') }}</i>
+      </div>
       <div class="field-wrapper">
         <v-progress-linear
           v-if="connecting"
@@ -11,8 +13,9 @@
         />
         <v-text-field
           v-else
+          ref="input"
           v-model="host"
-          label="Host"
+          :label="$t('join-game.host')"
           @keydown.enter="connect"
         />
         <v-alert
@@ -28,16 +31,24 @@
       <v-spacer />
       <v-btn
         text
+        @click="$emit('close')"
+      >
+        {{ $t('button.cancel') }}
+      </v-btn>
+      <v-btn
+        text
         :disabled="host.trim() === ''"
         @click="connect"
       >
-        Connect
+        {{ $t('button.connect') }}
       </v-btn>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
+import { connectExceptionToMessage } from '@/utils/networking'
+
 export default {
 
   data () {
@@ -47,6 +58,12 @@ export default {
       error: null,
       host: recent[0] || ''
     }
+  },
+
+  mounted () {
+    setTimeout(() => {
+      this.$refs.input.focus()
+    }, 1)
   },
 
   methods: {
@@ -60,13 +77,7 @@ export default {
         this.$emit('close')
       } catch (e) {
         this.connecting = false
-        if (e.error?.errno === 'EAI_AGAIN') {
-          this.error = "Can't resolve host"
-        } else if (e.error?.errno === 'ECONNREFUSED') {
-          this.error = 'Connection refused'
-        } else {
-          this.error = e.message || 'Connection failed'
-        }
+        this.error = connectExceptionToMessage(e)
         console.error(e)
       }
     }

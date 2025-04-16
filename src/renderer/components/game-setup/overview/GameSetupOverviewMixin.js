@@ -1,7 +1,7 @@
 import uniq from 'lodash/uniq'
 
 import { Expansion } from '@/models/expansions'
-import { isConfigValueEnabled, getDefaultElements } from '@/models/elements'
+import { isConfigValueEnabled } from '@/models/elements'
 
 export default {
   computed: {
@@ -19,7 +19,7 @@ export default {
           const max = Math.max(...quantities)
           const quantity = min === max ? min : -1
           if (quantity !== 0) {
-            releases.push({ expansion, id: expansion.name, title: release.title, quantity })
+            releases.push({ expansion, id: `${expansion.name}:${release.sets.join(',')}`, title: release.title, quantity, lang: release.id || expansion.name.toLowerCase().replace(/_/g, '-') })
           }
         }
       })
@@ -27,30 +27,36 @@ export default {
     },
 
     nonDefaultElements () {
-      const defaults = getDefaultElements(this.sets)
+      const defaults = this.$tiles.getDefaultElements(this.sets)
       const keys = uniq([...Object.keys(defaults), ...Object.keys(this.elements)])
       const diff = {}
       keys.forEach(cid => {
         if (defaults[cid] !== this.elements[cid]) {
-          diff[cid] = this.elements[cid] === undefined ? false : this.elements[cid]
+          if (this.elements[cid] === undefined) {
+            diff[cid] = false
+          } else if (this.elements[cid] === true) {
+            diff[cid] = true
+          } else {
+            diff[cid] = this.elements[cid] - (defaults[cid] || 0)
+          }
         }
       })
       if (this.elements.abbot) {
         if (this.elements.garden) {
           delete diff.garden
         } else {
-          diff.garden = 'off'
+          diff.garden = false
         }
       }
       return Object.entries(diff)
     },
 
     additions () {
-      return this.nonDefaultElements.filter(el => isConfigValueEnabled(el[1]))
+      return this.nonDefaultElements.filter(el => el[1] === true || el[1] > 0)
     },
 
     removals () {
-      return this.nonDefaultElements.filter(el => !isConfigValueEnabled(el[1]))
+      return this.nonDefaultElements.filter(el => el[1] === false || el[1] < 0)
     },
 
     configElementsSize () {

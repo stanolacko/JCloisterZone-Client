@@ -1,13 +1,14 @@
 import Vue from 'vue'
 
-const DEFAULT_ZOOM = 0.16
+const DEFAULT_ZOOM = 0.18
 
 export const state = () => ({
   dragging: null,
   pointsExpression: null,
   layers: {},
   tilePlacementMouseOver: null, // select tile from TilePlacementLayer must be drawn together with regular tils by TileLayer
-  zoom: DEFAULT_ZOOM
+  zoom: DEFAULT_ZOOM,
+  rotate: 0
 })
 
 const delayedHideTimeout = {}
@@ -47,14 +48,18 @@ export const mutations = {
   },
 
   resetZoom (state) {
-    state.zoom = DEFAULT_ZOOM
+    state.m = DEFAULT_ZOOM
   },
 
   changeZoom (state, steps) {
     let zoom = state.zoom * (1.3 ** steps)
     if (zoom < 0.03) { zoom = 0.03 };
-    if (zoom > 0.36) { zoom = 0.36 };
+    if (zoom > 0.4) { zoom = 0.4 };
     state.zoom = zoom
+  },
+
+  changeRotate (state, rotate) {
+    state.rotate = rotate
   },
 
   reset (state) {
@@ -63,6 +68,7 @@ export const mutations = {
     state.layers = {}
     state.tilePlacementMouseOver = null
     state.zoom = DEFAULT_ZOOM
+    state.rotate = 0
   }
 }
 

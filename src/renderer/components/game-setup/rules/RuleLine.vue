@@ -1,5 +1,5 @@
 <template>
-  <div class="rule-line">
+  <div :class="{ 'rule-line': true, 'read-only': readOnly }">
     <RuleSwitch v-if="rule.values === Boolean" :setup="setup" :rule="rule" :enabled="available" :read-only="readOnly" />
     <template v-else>
       {{ titleParts[0] }}
@@ -39,7 +39,7 @@ export default {
     },
 
     titleParts () {
-      return this.rule.title.split('{}')
+      return this.$t(['game-setup.variant',this.rule.id,'description'].join('.')).split('{}')
     }
   }
 }
@@ -48,5 +48,8 @@ export default {
 <style lang="sass" scoped>
 .hidden-title
   opacity: 0.2
+
+.read-only .hidden-title
+  display: none
 
 </style>

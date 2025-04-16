@@ -2,36 +2,30 @@
 <defs>
   <tiles>
     <tile id="MO/M1">
-      <cloister monastery="yes" />
-      <farm>NL NR EL ER SL SR WL WR</farm>
+      <monastery special="true" />
+      <field>NL NR EL ER SL SR WL WR</field>
     </tile>
     <tile id="MO/M2">
-      <cloister monastery="yes" />
-      <farm>NL NR EL ER SL SR WL WR</farm>
+      <monastery special="true" />
+      <field>NL NR EL ER SL SR WL WR</field>
     </tile>
     <tile id="MO/M3">
-      <cloister monastery="yes" />
-      <farm>NL NR EL ER SL SR WL WR</farm>
+      <monastery special="true" />
+      <field>NL NR EL ER SL SR WL WR</field>
     </tile>
     <tile id="MO/M4">
-      <cloister monastery="yes" />
-      <farm>NL NR EL ER SL SR WL WR</farm>
+      <monastery special="true" />
+      <field>NL NR EL ER SL SR WL WR</field>
     </tile>
     <tile id="MO/MR1">
-      <cloister monastery="yes" />
-      <road>S</road>
-      <farm>NL NR EL ER SL SR WL WR</farm>
-      <wagon-move>
-        <neighbouring>CLOISTER S</neighbouring>
-      </wagon-move>
+      <monastery special="true" wagon-move="a"/>
+      <road wagon-move="a">S</road>
+      <field>NL NR EL ER SL SR WL WR</field>
     </tile>
     <tile id="MO/MR2">
-      <cloister monastery="yes" />
-      <road>S</road>
-      <farm>NL NR EL ER SL SR WL WR</farm>
-      <wagon-move>
-        <neighbouring>CLOISTER S</neighbouring>
-      </wagon-move>
+      <monastery special="true" wagon-move="a"/>
+      <road wagon-move="a">S</road>
+      <field>NL NR EL ER SL SR WL WR</field>
     </tile>
   </tiles>
   <sets>

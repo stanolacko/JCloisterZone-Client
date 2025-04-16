@@ -2,53 +2,39 @@
 <defs>
 	<tiles>
 		<tile id="CU/S">
-			<cloister shrine="yes"/>
-			<farm>NL NR SL SR WL WR EL ER</farm>
+			<monastery shrine="true"/>
+			<field>NL NR SL SR WL WR EL ER</field>
 		</tile>
 		<tile id="CU/SC">
-			<cloister shrine="yes"/>
+			<monastery shrine="true"/>
 			<city>N</city>
-			<farm city="N">SL SR WL WR EL ER</farm>
+			<field city="N">SL SR WL WR EL ER</field>
 		</tile>
 		<tile id="CU/SR">
-			<cloister shrine="yes"/>
-			<road>S</road>
-			<farm>NL NR SL SR WL WR EL ER</farm>
-			<wagon-move>
-				<neighbouring>CLOISTER S</neighbouring>
-			</wagon-move>
+			<monastery shrine="true" wagon-move="a"/>
+			<road wagon-move="a">S</road>
+			<field>NL NR SL SR WL WR EL ER</field>
 		</tile>
 		<tile id="CU/SCFR">
-			<cloister shrine="yes"/>
+			<monastery shrine="true" wagon-move="a"/>
 			<city>N</city>
-			<road>S</road>
-			<farm city="N">SL SR WL WR EL ER</farm>
-			<wagon-move>
-				<neighbouring>CLOISTER S</neighbouring>
-			</wagon-move>
+			<road wagon-move="a">S</road>
+			<field city="N">SL SR WL WR EL ER</field>
 		</tile>
 		<tile id="CU/SRFR">
-			<cloister shrine="yes"/>
-			<road>N</road>
-			<road>S</road>
-			<farm>NL WL WR SR</farm>
-			<farm>NR EL ER SL</farm>
-			<wagon-move>
-				<neighbouring>CLOISTER N</neighbouring>
-				<neighbouring>CLOISTER S</neighbouring>
-			</wagon-move>
+			<monastery shrine="true" wagon-move="a b"/>
+			<road wagon-move="a">N</road>
+			<road wagon-move="b">S</road>
+			<field>NL WL WR SR</field>
+			<field>NR EL ER SL</field>
 		</tile>
 		<tile id="CU/SRCR">
-			<cloister shrine="yes"/>
+			<monastery shrine="true" wagon-move="a b"/>
 			<city>N</city>
-			<road>W</road>
-			<road>E</road>
-			<farm city="N">WR EL</farm>
-			<farm>WL SL SR ER</farm>
-			<wagon-move>
-				<neighbouring>CLOISTER W</neighbouring>
-				<neighbouring>CLOISTER E</neighbouring>
-			</wagon-move>
+			<road wagon-move="a">W</road>
+			<road wagon-move="b">E</road>
+			<field city="N">WR EL</field>
+			<field>WL SL SR ER</field>
 		</tile>
 	</tiles>
 	<sets>
