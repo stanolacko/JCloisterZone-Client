@@ -1,0 +1,230 @@
+{
+  "appVersion": "5.12.1",
+  "gameId": "1",
+  "name": "",
+  "initialRandom": 0,
+  "created": "2025-04-16T19:16:40.003Z",
+  "clock": 1,
+  "setup": {
+    "sets": {
+      "basic:1": 1,
+      "family-feud": 1
+    },
+    "elements": {
+      "small-follower": 7,
+      "farmers": true,
+      "families": true
+    },
+    "rules": {},
+    "timer": null,
+    "start": [
+      {
+        "tile": "BA/RCr",
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    ],
+    "options": {},
+    "addons": {
+      "family-feud": 0
+    }
+  },
+  "players": [
+    {
+      "name": "John",
+      "slot": 1
+    },
+    {
+      "name": "Betty",
+      "slot": 2
+    }
+  ],
+  "replay": [
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "family-feud/cccc.==",
+        "rotation": "R0",
+        "position": [
+          0,
+          -1
+        ]
+      },
+      "player": 0,
+      "clock": 2745
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            0,
+            -1
+          ],
+          "location": "NWSE",
+          "feature": "City"
+        },
+        "meepleId": "0.small.1"
+      },
+      "player": 0,
+      "clock": 3681
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.9574906622174353
+      },
+      "player": 0,
+      "clock": 4080
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/CFC.2",
+        "rotation": "R90",
+        "position": [
+          -1,
+          -1
+        ]
+      },
+      "player": 1,
+      "clock": 7137
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 1,
+      "clock": 11426
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.4062313822739718
+      },
+      "player": 1,
+      "clock": 11441
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/CFC.2",
+        "rotation": "R0",
+        "position": [
+          0,
+          -2
+        ]
+      },
+      "player": 0,
+      "clock": 13279
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 14142
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.9594084506304601
+      },
+      "player": 0,
+      "clock": 14156
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/CFC.2",
+        "rotation": "R90",
+        "position": [
+          1,
+          -1
+        ]
+      },
+      "player": 1,
+      "clock": 25714
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            1,
+            -1
+          ],
+          "location": "E",
+          "feature": "City"
+        },
+        "meepleId": "1.small.1"
+      },
+      "player": 1,
+      "clock": 26727
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.6505530127030854
+      },
+      "player": 1,
+      "clock": 27509
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "family-feud/fffc.=",
+        "rotation": "R0",
+        "position": [
+          -1,
+          -2
+        ]
+      },
+      "player": 0,
+      "clock": 33991
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            -1,
+            -2
+          ],
+          "location": "W",
+          "feature": "City"
+        },
+        "meepleId": "0.small.1"
+      },
+      "player": 0,
+      "clock": 34896
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.50190244029712
+      },
+      "player": 0,
+      "clock": 38234
+    }
+  ],
+  "gameAnnotations": {
+    "drawOrder": [
+      "family-feud/cccc.==",
+      "BA/CFC.2",
+      "BA/CFC.2",
+      "BA/CFC.2",
+      "family-feud/fffc.="
+    ],
+    "endTurn": 5
+  },
+  "test": {
+    "description": "City With Two Orange Pennants",
+    "assertions": [
+      "John scored city for 14 points.",
+      "John scored city for 2 points.",
+      "Betty scored city for 1 point.",
+      "John has 16 points.",
+      "Betty has 1 point."
+    ]
+  }
+}

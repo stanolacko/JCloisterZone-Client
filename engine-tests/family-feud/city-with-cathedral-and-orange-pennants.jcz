@@ -1,0 +1,217 @@
+{
+  "appVersion": "5.12.1",
+  "gameId": "1",
+  "name": "",
+  "initialRandom": 0,
+  "created": "2025-04-16T19:13:55.526Z",
+  "clock": 1,
+  "setup": {
+    "options": {},
+    "sets": {
+      "basic:1": 1,
+      "inns-and-cathedrals:1": 1,
+      "family-feud": 1
+    },
+    "elements": {
+      "small-follower": 7,
+      "farmers": true,
+      "big-follower": 1,
+      "cathedral": true,
+      "families": true
+    },
+    "rules": {},
+    "timer": null,
+    "start": [
+      {
+        "tile": "BA/RCr",
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    ],
+    "addons": {
+      "family-feud": 0
+    }
+  },
+  "players": [
+    {
+      "name": "Ariel",
+      "slot": 0
+    }
+  ],
+  "replay": [
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "IC/Cccc.c",
+        "rotation": "R0",
+        "position": [
+          0,
+          -1
+        ]
+      },
+      "player": 0,
+      "clock": 2574
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            0,
+            -1
+          ],
+          "location": "NWSE",
+          "feature": "City"
+        },
+        "meepleId": "0.small.1"
+      },
+      "player": 0,
+      "clock": 3257
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.5910262833543727
+      },
+      "player": 0,
+      "clock": 3489
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "family-feud/ccfc.3.=",
+        "rotation": "R270",
+        "position": [
+          1,
+          -1
+        ]
+      },
+      "player": 0,
+      "clock": 6349
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 7243
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.08803886384731663
+      },
+      "player": 0,
+      "clock": 7254
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "family-feud/fffc.=",
+        "rotation": "R180",
+        "position": [
+          -1,
+          -1
+        ]
+      },
+      "player": 0,
+      "clock": 9630
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 9942
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.7236349845855727
+      },
+      "player": 0,
+      "clock": 9953
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "family-feud/cfff.=",
+        "rotation": "R180",
+        "position": [
+          0,
+          -2
+        ]
+      },
+      "player": 0,
+      "clock": 12241
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 12878
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.8776727092461851
+      },
+      "player": 0,
+      "clock": 12889
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "family-feud/rrrc.=",
+        "rotation": "R90",
+        "position": [
+          1,
+          0
+        ]
+      },
+      "player": 0,
+      "clock": 17438
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            1,
+            0
+          ],
+          "location": "N",
+          "feature": "City"
+        },
+        "meepleId": "0.small.1"
+      },
+      "player": 0,
+      "clock": 18185
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.8479202394345089
+      },
+      "player": 0,
+      "clock": 20043
+    }
+  ],
+  "gameAnnotations": {
+    "drawOrder": [
+      "IC/Cccc.c",
+      "family-feud/ccfc.3.=",
+      "family-feud/fffc.=",
+      "family-feud/cfff.=",
+      "family-feud/rrrc.="
+    ],
+    "endTurn": 5
+  },
+  "test": {
+    "description": "City With Cathedral And Orange Pennants",
+    "assertions": [
+      "Ariel scored city for 24 points.",
+      "Ariel scored city for 3 points.",
+      "Ariel has 27 points."
+    ]
+  }
+}

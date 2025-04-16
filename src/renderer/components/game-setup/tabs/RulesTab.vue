@@ -142,6 +142,13 @@
           <template #disabled>{{ $t('game-setup.rules.acrobats-disabled') }}</template>
         </GameMechanicsBox>
 
+        <GameMechanicsBox :item="GameElement.FAMILIES">
+          <template #icon>
+            <img src="~/assets/features/C1/families.png" height="55">
+          </template>
+          <template #description>{{ $t('game-setup.rules.families-description') }}</template>
+          <template #disabled>{{ $t('game-setup.rules.families-disabled') }}</template>
+        </GameMechanicsBox>
         <GameMechanicsBox :item="GameElement.WELL">
           <template #icon>
             <img src="~/assets/features/C2/well.png" height="55">
