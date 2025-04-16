@@ -253,6 +253,8 @@
       "vodyanoy": "Vodyanoy",
       "watchtower": "Watchtower",
       "watchtowers": "Watchtowers",
+      "well": "Well",
+      "wells": "Wells",
       "wind-rose": "Wind rose",
       "wind-roses": "Wind roses",
       "yaga-hut": "Yaga hut"
@@ -350,7 +352,9 @@
       "starting-tiles-configuration": "Starting tile(s) configuration",
       "starting-tiles-different-configuration": "Some expansions provides alternative starting configurations.",
       "vineyard-description": "Additional points for nearby monastery.",
-      "vineyard-disabled": "No tile with Vineyard is in game."
+      "vineyard-disabled": "No tile with Vineyard is in game.",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "No tile with Well is in game."
     },
     "selected-tiles": "Selected tiles",
     "tiles": {

@@ -253,6 +253,8 @@
       "vodyanoy": "Vodyanoy",
       "watchtower": "Sargybos bokštas",
       "watchtowers": "Sargybos bokštai",
+      "well": "Well",
+      "wells": "Wells",
       "wind-rose": "Vėjo rožė",
       "wind-roses": "Vėjo Rožės",
       "yaga-hut": "Yagos trobelė"
@@ -350,7 +352,9 @@
       "starting-tiles-configuration": "Pradžios kortelės(ių) pasirinkimas",
       "starting-tiles-different-configuration": "Kai kurie papildymai suteikia alternatyvias pradžios konfigūracijas",
       "vineyard-description": "Papildomi taškai už šalia esančius vienuolynus",
-      "vineyard-disabled": "Kortelių su Vynuogynu nėra šiame žaidime"
+      "vineyard-disabled": "Kortelių su Vynuogynu nėra šiame žaidime",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "No tile with Well is in game."
     },
     "selected-tiles": "Pasirinktos kortelės",
     "tiles": {

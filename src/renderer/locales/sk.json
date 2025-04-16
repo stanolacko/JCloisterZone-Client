@@ -253,6 +253,8 @@
       "vodyanoy": "Vodník",
       "watchtower": "Strážna veža",
       "watchtowers": "Strážne veže",
+      "well": "Studňa",
+      "wells": "Studne",
       "wind-rose": "Veterná ružica",
       "wind-roses": "Veterné ružice",
       "yaga-hut": "Izbuška"
@@ -350,7 +352,9 @@
       "starting-tiles-configuration": "Štartovacia konfigurácia",
       "starting-tiles-different-configuration": "Niektoré rozšírenia poskytujú alternatívne štartovacie konfigurácie.",
       "vineyard-description": "Bonusové body pre ukočený kláštor.",
-      "vineyard-disabled": "V hre nie je žiadna kartička s vinicami."
+      "vineyard-disabled": "V hre nie je žiadna kartička s vinicami.",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "No tile with Well is in game."
     },
     "selected-tiles": "Zvolené kartičky",
     "tiles": {

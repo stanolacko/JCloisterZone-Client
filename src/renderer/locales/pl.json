@@ -253,6 +253,8 @@
       "vodyanoy": "Utopiec",
       "watchtower": "Strażnica",
       "watchtowers": "Strażnice",
+      "well": "Well",
+      "wells": "Wells",
       "wind-rose": "Róża Wiatrów",
       "wind-roses": "Róże Wiatrów",
       "yaga-hut": "Hatka Baby Jagi"
@@ -350,7 +352,9 @@
       "starting-tiles-configuration": "Konfiguracja startowa",
       "starting-tiles-different-configuration": "Niektóre z roszerzeń pozwalają na alternatywną konfiguracje startową.",
       "vineyard-description": "Dodatkowe punkty do klasztorów.",
-      "vineyard-disabled": "Nie wybrano płytek z winiarnią."
+      "vineyard-disabled": "Nie wybrano płytek z winiarnią.",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "No tile with Well is in game."
     },
     "selected-tiles": "Wybrane płytki",
     "tiles": {

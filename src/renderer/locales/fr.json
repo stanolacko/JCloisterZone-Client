@@ -254,6 +254,8 @@
       "vodyanoy": "Vodianoï",
       "watchtower": "Tour de guet",
       "watchtowers": "Tours de guet",
+      "well": "Well",
+      "wells": "Wells",
       "wind-rose": "Rose des vents",
       "wind-roses": "Roses des vents",
       "yaga-hut": "Isba de Baba Yaga"
@@ -351,7 +353,9 @@
       "starting-tiles-configuration": "Configuration de la ou les tuiles de départ",
       "starting-tiles-different-configuration": "Certaines extensions fournissent des configurations de départ alternatives.",
       "vineyard-description": "Points supplémentaires pour les abbayes situées autour.",
-      "vineyard-disabled": "Aucune tuile Vignoble n’est en jeu."
+      "vineyard-disabled": "Aucune tuile Vignoble n’est en jeu.",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "No tile with Well is in game."
     },
     "selected-tiles": "Tuiles sélectionnées",
     "tiles": {

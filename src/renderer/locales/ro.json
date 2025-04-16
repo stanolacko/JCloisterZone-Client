@@ -253,6 +253,8 @@
       "vodyanoy": "Vodyanoy",
       "watchtower": "Turn de observație",
       "watchtowers": "Turnuri de observație",
+      "well": "Well",
+      "wells": "Wells",
       "wind-rose": "Roză a vântului",
       "wind-roses": "Rozele vântului",
       "yaga-hut": "Coliba lui Yaga"
@@ -350,7 +352,9 @@
       "starting-tiles-configuration": "Configurația cartonașului/cartonașelor de pornire",
       "starting-tiles-different-configuration": "Unele extensii oferă configurații de pornire alternative.",
       "vineyard-description": "Puncte adiționale pentru mănăstire învecinată.",
-      "vineyard-disabled": "Nu există niciun cartonaș cu vie în joc."
+      "vineyard-disabled": "Nu există niciun cartonaș cu vie în joc.",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "No tile with Well is in game."
     },
     "selected-tiles": "Cartonașe selectate",
     "tiles": {

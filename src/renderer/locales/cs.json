@@ -253,6 +253,8 @@
       "vodyanoy": "Vinohrady",
       "watchtower": "Strážní věž",
       "watchtowers": "Strážní věže",
+      "well": "Studna",
+      "wells": "Studny",
       "wind-rose": "Větrná růžice",
       "wind-roses": "Větrné růžice",
       "yaga-hut": "Chaloupka baby Yagy"
@@ -350,7 +352,9 @@
       "starting-tiles-configuration": "Rozložení startovních kartiček",
       "starting-tiles-different-configuration": "Některá rozšíření umožňují alternativní počáteční rozložení.",
       "vineyard-description": "Body navíc pro dokončený klášter.",
-      "vineyard-disabled": "Ve hře není žádná kartička s vinohradem."
+      "vineyard-disabled": "Ve hře není žádná kartička s vinohradem.",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "Ve hře není žádná kartička se studnou."
     },
     "selected-tiles": "Vybrané kartičky",
     "tiles": {

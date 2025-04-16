@@ -253,6 +253,8 @@
         "vodyanoy": "Водяной",
         "watchtower": "Смотровая башня",
         "watchtowers": "Смотровые башни",
+        "well": "Well",
+        "wells": "Wells",
         "wind-rose": "Роза ветров",
         "wind-roses": "Розы ветров",
         "yaga-hut": "Хижина Бабы Яги"
@@ -294,7 +296,7 @@
         "rename-player": "Переименовать игрока"
       },
       "game-element-box": {
-        "mandatory-for-selected-tiles": "Обязательно для выбранных плиток",,
+        "mandatory-for-selected-tiles": "Обязательно для выбранных плиток",
         "related-tiles-not-selected": "Связанные плитки не выбраны"
       },
       "header": {
@@ -350,7 +352,9 @@
           "starting-tiles-configuration": "Конфигурация начальных плиток",
           "starting-tiles-different-configuration": "Некоторые дополнения предлагают альтернативные конфигурации начальных плиток.",
           "vineyard-description": "Дополнительные очки за близлежащий монастырь.",
-          "vineyard-disabled": "В игре нет плитки с виноградником."
+          "vineyard-disabled": "В игре нет плитки с виноградником.",
+          "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+          "well-disabled": "No tile with Well is in game."
       },
       "selected-tiles": "Выбранные плитки",
       "tiles": {
