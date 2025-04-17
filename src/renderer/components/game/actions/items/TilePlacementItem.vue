@@ -61,13 +61,18 @@ export default {
         this.rotation = getNextRotation(this.rotation)
       }
     }
+    this.onRotate = r => {
+      this.rotation = r
+    }
     this.$root.$on('rclick', this.onRightClick)
     this.$root.$on('tile-placement.select', this.onSelect)
+    this.$root.$on('tile-placement.rotation', this.onRotate)
   },
 
   beforeDestroy () {
     this.$root.$off('rclick', this.onRightClick)
     this.$root.$off('tile-placement.select', this.onSelect)
+    this.$root.$off('tile-placement.rotation', this.onRotate)
   },
 
   methods: {
