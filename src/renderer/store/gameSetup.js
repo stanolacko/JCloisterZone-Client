@@ -184,14 +184,22 @@ export const actions = {
     }
   },
 
-  setElementConfig ({ commit }, { id, config }) {
+  setElementConfig ({ commit, state }, { id, config }) {
     commit('elementConfig', { id, config })
-    if (id === 'mage') {
-      commit('elementConfig', { id: 'witch', config })
-    } else if (id === 'witch') {
-      commit('elementConfig', { id: 'mage', config })
+    
+    const linkedPairs = {
+      mage: 'witch',
+      witch: 'mage'
+    }
+
+    if (id in linkedPairs) {
+      commit('elementConfig', { id: linkedPairs[id], config })
     } else if (id === 'abbot') {
-      commit('elementConfig', { id: 'garden', config })
+      commit('elementConfig', { id: 'garden', config: config > 0 })
+    } else if (id === 'garden') {
+      if (config && !(state.elements.abbot > 0)) {
+        commit('elementConfig', { id: 'abbot', config: 1 })
+      }
     }
   },
 
