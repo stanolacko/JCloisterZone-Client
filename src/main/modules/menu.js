@@ -76,7 +76,9 @@ async function createMenu (win, messages) {
         { id: 'remote-engine', label: 'Use Remote Engine', type: 'checkbox', checked: settings.enginePath === 'localhost:9000', click () { toggleRemoteEngine() } },
         { id: 'local-play-online', label: 'Use Local Play Online', type: 'checkbox', checked: settings.playOnlineUrl === 'localhost:8000/ws', click () { toggleLocalPlayOnline() } },
         { id: 'dump-server', label: 'Dump Hosted Game Server State', click () { win.webContents.send('menu.dump-server') } },
+        { type: 'separator' },
         { id: 'test-runner', label: 'Test Runner', click () { win.webContents.send('menu.test-runner') } },
+        { id: 'save-for-test-runner', label: 'Save Scenario for Test Rinner', click () { win.webContents.send('menu.save-for-test-runner') } },
         { type: 'separator' },
         { label: 'Reload Add-ons', click () { win.webContents.send('menu.reload-addons') } },
         { id: 'theme-inspector', label: 'Theme inspector', click () { win.webContents.send('menu.theme-inspector') } }
