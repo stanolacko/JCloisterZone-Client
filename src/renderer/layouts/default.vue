@@ -86,7 +86,7 @@ export default {
 
   head () {
     return {
-      title: this.onlineConnected ? 'JCloisterZone @ ' + this.playOnlineHostname : 'JCloisterZone'
+      title: this.onlineConnected ? 'JCloisterZone Fan Edition @ ' + this.playOnlineHostname : 'JCloisterZone Fan Edition'
     }
   },
 

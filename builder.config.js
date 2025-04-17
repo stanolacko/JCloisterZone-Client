@@ -2,7 +2,7 @@ const ICONS_DIR = 'build/icons/'
 
 const windowsOS = {
   win: {
-    icon: ICONS_DIR + 'win-icon.ico',
+    icon: ICONS_DIR + 'win-icon-fan.ico',
     publisherName: 'farin',
     target: 'nsis'
   },
@@ -43,9 +43,9 @@ const macOS = {
 
 module.exports = {
   asar: false,
-  productName: 'JCloisterZone',
-  appId: 'com.jcloisterzone',
-  artifactName: 'jcloisterzone-${version}.${ext}',
+  productName: 'JCloisterZoneFan',
+  appId: 'com.jcloisterzone.fan',
+  artifactName: 'jcloisterzonefan-${version}.${ext}',
   directories: {
     output: 'build'
   },
