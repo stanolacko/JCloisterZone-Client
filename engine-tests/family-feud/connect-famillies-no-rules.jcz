@@ -1,0 +1,163 @@
+{
+  "appVersion": "5.12.1",
+  "gameId": "6353f62a219e4a6c9974bdf47c220588",
+  "name": "",
+  "initialRandom": 0.841542944514581,
+  "created": "2025-04-16T10:28:06.166Z",
+  "clock": 147270,
+  "setup": {
+    "options": {},
+    "sets": {
+      "basic:1": 1,
+      "family-feud": 1
+    },
+    "elements": {
+      "small-follower": 7,
+      "farmers": true
+    },
+    "rules": {},
+    "timer": null,
+    "start": [
+      {
+        "tile": "BA/RCr",
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    ],
+    "addons": {
+      "family-feud": 0
+    }
+  },
+  "players": [
+    {
+      "name": "Ariel",
+      "slot": 0,
+      "clientId": "fdf7ce65d30449bdbbfdb4fd5360c111"
+    },
+    {
+      "name": "John",
+      "slot": 1,
+      "clientId": "fdf7ce65d30449bdbbfdb4fd5360c111"
+    }
+  ],
+  "replay": [
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/CcRr+",
+        "rotation": "R180",
+        "position": [
+          0,
+          -1
+        ]
+      },
+      "player": 0,
+      "clock": 2956
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            0,
+            -1
+          ],
+          "location": "SE",
+          "feature": "City"
+        },
+        "meepleId": "0.small.1"
+      },
+      "player": 0,
+      "clock": 3656
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.3795779509751611
+      },
+      "player": 0,
+      "clock": 3899
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "family-feud/crrc.=",
+        "rotation": "R0",
+        "position": [
+          1,
+          -1
+        ]
+      },
+      "player": 1,
+      "clock": 5317
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 1,
+      "clock": 81296
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.18762840778849954
+      },
+      "player": 1,
+      "clock": 81309
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/CRr",
+        "rotation": "R180",
+        "position": [
+          1,
+          -2
+        ]
+      },
+      "player": 0,
+      "clock": 83195
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            1,
+            -2
+          ],
+          "location": "NR.EL.ER.WL",
+          "feature": "Field"
+        },
+        "meepleId": "0.small.2"
+      },
+      "player": 0,
+      "clock": 87433
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.713964287553227
+      },
+      "player": 0,
+      "clock": 90348
+    }
+  ],
+  "gameAnnotations": {
+    "drawOrder": [
+      "BA/CcRr+",
+      "family-feud/crrc.="
+    ],
+    "endTurn": 3
+  },
+  "test": {
+    "description": "Connect Famillies No Rules",
+    "assertions": [
+      "Ariel scored city for 12 points.",
+      "Ariel scored field for 3 points.",
+      "Ariel has 15 points.",
+      "John has 0 points."
+    ]
+  }
+}
