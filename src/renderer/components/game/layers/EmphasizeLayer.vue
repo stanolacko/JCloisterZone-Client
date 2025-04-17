@@ -27,8 +27,8 @@
           <circle
             v-else-if="emphasis.type === 'meeple'"
             :x="0" :y="0" :r="BASE_SIZE / 2"
-            :transform="emphasis.barn ? transformPosition(emphasis.position) : transformPoint(emphasis)"
-          />
+            :transform="emphasis.barn || emphasis.obelisk ? transformPosition(emphasis.position) : transformPoint(emphasis)"
+           />
           <g v-else-if="emphasis.type === 'feature'">
             <g
               v-for="(feature, idx) in featurePlaces"

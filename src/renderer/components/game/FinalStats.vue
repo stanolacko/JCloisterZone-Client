@@ -207,6 +207,15 @@
         </div>
       </template>
 
+      <template v-if="stats.points.obelisk.some(p => p)">
+        <div class="header obelisk" :title="$t('game.element.obelisk')">
+          <Meeple type="Obelisk" />
+        </div>
+        <div v-for="(val, idx) in stats.points.obelisk" :key="'obelisk-'+idx" class="obeliskvalue">
+          {{ val }}
+        </div>
+      </template>
+
     </div>
   </div>
 </template>
@@ -280,7 +289,8 @@ export default {
           'wind-rose': (new Array(this.players.length)).fill(0),
           'church': (new Array(this.players.length)).fill(0),
           'yaga-hut': (new Array(this.players.length)).fill(0),
-          'vodyanoy': (new Array(this.players.length)).fill(0)
+          'vodyanoy': (new Array(this.players.length)).fill(0),
+          'obelisk': (new Array(this.players.length)).fill(0)
         }
       }
       this.history.forEach(h => {

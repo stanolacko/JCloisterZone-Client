@@ -57,6 +57,11 @@
             <use :href="`${MEEPLES_SVG}#ringmaster`" />
           </svg>
         </GameElementBox>
+        <GameElementBox :item="GameElement.OBELISK" :max="9">
+          <svg class="meeple" :width="55" :height="55">
+            <use :href="`${MEEPLES_SVG}#obelisk`" />
+          </svg>
+        </GameElementBox>
       </div>
     </ConfigSection>
 
