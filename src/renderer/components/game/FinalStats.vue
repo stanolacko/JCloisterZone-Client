@@ -165,7 +165,7 @@
       </template>
 
       <template v-if="stats.points.acrobats.some(p => p)">
-        <div class="header bigtop" :title="$t('game.feature.acrobats')">
+        <div class="header acrobats" :title="$t('game.feature.acrobats')">
           <svg class="meeple" width="40" height="40">
             <g transform="scale(0.40)">
               <use :href="`${MEEPLES_SVG}#small-follower`" x="22" y="0" />
@@ -174,7 +174,7 @@
             </g>
           </svg>
         </div>
-        <div v-for="(val, idx) in stats.points.bigtop" :key="'acrobats-'+idx" class="bigtop value">
+        <div v-for="(val, idx) in stats.points.acrobats" :key="'acrobats-'+idx" class="acrobats value">
           {{ val }}
         </div>
       </template>
