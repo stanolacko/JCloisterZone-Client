@@ -253,6 +253,8 @@
       "vodyanoy": "Vodyanoy",
       "watchtower": "Talaia",
       "watchtowers": "Talaies",
+      "well": "Well",
+      "wells": "Wells",
       "wind-rose": "Rosa dels vents",
       "wind-roses": "Roses dels vents",
       "yaga-hut": "Cabana de Yaga"
@@ -350,7 +352,9 @@
       "starting-tiles-configuration": "Configuració de les rajoles inicials",
       "starting-tiles-different-configuration": "Algunes expansions proporcionen configuracions inicials alternatives.",
       "vineyard-description": "Punts addicionals per monestir proper.",
-      "vineyard-disabled": "No hi ha cap rajola amb vinyes a la partida."
+      "vineyard-disabled": "No hi ha cap rajola amb vinyes a la partida.",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "No tile with Well is in game."
     },
     "selected-tiles": "Rajoles seleccionades",
     "tiles": {

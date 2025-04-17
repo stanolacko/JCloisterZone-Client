@@ -253,6 +253,8 @@
       "vodyanoy": "Vodyanoy",
       "watchtower": "Atalaya",
       "watchtowers": "Atalayas",
+      "well": "Well",
+      "wells": "Wells",
       "wind-rose": "Rosa de los Vientos",
       "wind-roses": "Rosas de los Vientos",
       "yaga-hut": "Cabaña de Yagá"
@@ -350,7 +352,9 @@
       "starting-tiles-configuration": "Configuración de loseta(s) de inicio",
       "starting-tiles-different-configuration": "Algunas expansiones ofrecen configuraciones de inicio alternativas.",
       "vineyard-description": "Puntos adicionales para monasterio cercano.",
-      "vineyard-disabled": "No hay ninguna loseta con Viñedo en el juego."
+      "vineyard-disabled": "No hay ninguna loseta con Viñedo en el juego.",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "No tile with Well is in game."
     },
     "selected-tiles": "Losetas seleccionadas",
     "tiles": {

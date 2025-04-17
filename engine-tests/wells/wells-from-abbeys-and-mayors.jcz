@@ -1,0 +1,277 @@
+{
+  "appVersion": "5.12.1",
+  "gameId": "f7f9f6c151b04f65bbc9a771944f52e9",
+  "name": "",
+  "initialRandom": 0.9255699342586401,
+  "created": "2025-04-14T10:05:34.985Z",
+  "clock": 136638,
+  "setup": {
+    "options": {},
+    "sets": {
+      "basic:1": 1,
+      "abbey-and-mayor:1": 3
+    },
+    "elements": {
+      "small-follower": 7,
+      "farmers": true,
+      "barn": 1,
+      "wagon": 1,
+      "mayor": 1,
+      "abbey": 1
+    },
+    "rules": {},
+    "timer": null,
+    "start": [
+      {
+        "tile": "BA/RCr",
+        "x": 0,
+        "y": 0,
+        "rotation": 0
+      }
+    ]
+  },
+  "players": [
+    {
+      "name": "Ariel",
+      "slot": 0,
+      "clientId": "fdf7ce65d30449bdbbfdb4fd5360c111"
+    },
+    {
+      "name": "Betty",
+      "slot": 2,
+      "clientId": "fdf7ce65d30449bdbbfdb4fd5360c111"
+    }
+  ],
+  "replay": [
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "AM/Rrr",
+        "rotation": "R180",
+        "position": [
+          -1,
+          0
+        ]
+      },
+      "player": 0,
+      "clock": 5126
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            -1,
+            0
+          ],
+          "location": "_N",
+          "feature": "Road"
+        },
+        "meepleId": "0.small.1"
+      },
+      "player": 0,
+      "clock": 6211
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.7104954822436382
+      },
+      "player": 0,
+      "clock": 7040
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "AM/Rrr",
+        "rotation": "R0",
+        "position": [
+          -2,
+          0
+        ]
+      },
+      "player": 1,
+      "clock": 10909
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 1,
+      "clock": 11355
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.3358026803001062
+      },
+      "player": 1,
+      "clock": 11370
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RRR",
+        "rotation": "R0",
+        "position": [
+          -3,
+          0
+        ]
+      },
+      "player": 0,
+      "clock": 109959
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 110899
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.4339797030297876
+      },
+      "player": 0,
+      "clock": 110909
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RRR",
+        "rotation": "R0",
+        "position": [
+          -2,
+          -1
+        ]
+      },
+      "player": 1,
+      "clock": 114120
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 1,
+      "clock": 114452
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.09014585343454584
+      },
+      "player": 1,
+      "clock": 114464
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RRR",
+        "rotation": "R90",
+        "position": [
+          -1,
+          1
+        ]
+      },
+      "player": 0,
+      "clock": 116701
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 118202
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.035623126234239244
+      },
+      "player": 0,
+      "clock": 118219
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "BA/RRR",
+        "rotation": "R0",
+        "position": [
+          1,
+          0
+        ]
+      },
+      "player": 1,
+      "clock": 120258
+    },
+    {
+      "type": "DEPLOY_MEEPLE",
+      "payload": {
+        "pointer": {
+          "position": [
+            1,
+            0
+          ],
+          "location": "E",
+          "feature": "Road"
+        },
+        "meepleId": "1.small.1"
+      },
+      "player": 1,
+      "clock": 121454
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.09955251563426937
+      },
+      "player": 1,
+      "clock": 121973
+    },
+    {
+      "type": "PLACE_TILE",
+      "payload": {
+        "tileId": "AM/Rrr",
+        "rotation": "R0",
+        "position": [
+          2,
+          0
+        ]
+      },
+      "player": 0,
+      "clock": 123576
+    },
+    {
+      "type": "PASS",
+      "payload": {},
+      "player": 0,
+      "clock": 127272
+    },
+    {
+      "type": "COMMIT",
+      "payload": {
+        "random": 0.4850057867797659
+      },
+      "player": 0,
+      "clock": 127282
+    }
+  ],
+  "gameAnnotations": {
+    "drawOrder": [
+      "AM/Rrr",
+      "AM/Rrr",
+      "BA/RRR",
+      "BA/RRR",
+      "BA/RRR",
+      "BA/RRR",
+      "AM/Rrr"
+    ],
+    "endTurn": 7
+  },
+  "test": {
+    "description": "Wells From Abbeys And Mayors",
+    "assertions": [
+      "Ariel scored road for 7 points.",
+      "Betty scored road for 2 points.",
+      "Ariel has 7 points.",
+      "Betty has 2 points."
+    ]
+  }
+}

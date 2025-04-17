@@ -50,6 +50,7 @@
       <template v-else-if="item.name === 'tiles.S'"><v-icon>fas fa-arrow-down</v-icon></template>
       <template v-else-if="item.name === 'tiles.W'"><v-icon>fas fa-arrow-left</v-icon></template>
       <template v-else-if="item.name === 'tiles.E'"><v-icon>fas fa-arrow-right</v-icon></template>
+      <template v-else-if="item.name === 'wells'"><img src="~/assets/features/C2/well.png" width="40" height="40"></template>
 
       <!-- TODO images, also imprev tile image (green field ?)-->
       <template v-else-if="item.name === 'darmstadtium'"><ExpansionSymbol :expansion="Expansion.DARMSTADT" :style="{ width: 40, height: 40 }" /></template>

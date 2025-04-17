@@ -253,6 +253,8 @@
       "vodyanoy": "Vodyanoy",
       "watchtower": "Wachttoren",
       "watchtowers": "Wachttorens",
+      "well": "Well",
+      "wells": "Wells",
       "wind-rose": "Windroos",
       "wind-roses": "Windrozen",
       "yaga-hut": "Yaga-hut"
@@ -350,7 +352,9 @@
       "starting-tiles-configuration": "Configuratie van de starttegel(s)",
       "starting-tiles-different-configuration": "Sommige uitbreidingen voorzien in alternatieve startconfiguraties.",
       "vineyard-description": "Geeft extra punten voor naastgelegen klooster.",
-      "vineyard-disabled": "Er zijn geen tegels met wijngaarden in het spel."
+      "vineyard-disabled": "Er zijn geen tegels met wijngaarden in het spel.",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "No tile with Well is in game."
     },
     "selected-tiles": "Geselecteerde tegels",
     "tiles": {

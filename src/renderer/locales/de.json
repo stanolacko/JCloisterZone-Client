@@ -253,6 +253,8 @@
       "vodyanoy": "Vodjanoy",
       "watchtower": "Wachturm",
       "watchtowers": "Wachtürme",
+      "well": "Well",
+      "wells": "Wells",
       "wind-rose": "Windrose",
       "wind-roses": "Windrosen",
       "yaga-hut": "Baba-Jagas Hütte"
@@ -350,7 +352,9 @@
       "starting-tiles-configuration": "Startplättchen-Konfiguration",
       "starting-tiles-different-configuration": "Einige Erweiterungen bieten alternative Startkonfigurationen.",
       "vineyard-description": "Zusätzliche Punkte für nahe gelegenes Kloster.",
-      "vineyard-disabled": "Kein Plättchen mit Weinberg ist im Spiel."
+      "vineyard-disabled": "Kein Plättchen mit Weinberg ist im Spiel.",
+      "well-description": "Add point per well on roads. Road with in gets 2 points when completed but no points on final scoring.",
+      "well-disabled": "No tile with Well is in game."
     },
     "selected-tiles": "Ausgewählte Plättchen",
     "tiles": {
